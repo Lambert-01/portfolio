@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NDACYAYISABA Lambert">
+    <meta name="description" content="NDACYAYISABA Lambert's Professional Portfolio">
+    <title>NDACYAYISABA Lambert | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    {% load static %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                NDACYAYISABA Lambert
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 animated fadeIn">Hello, I'm NDACYAYISABA Lambert</h1>
+            <p class="lead animated fadeIn">AI Specialist, Programmer, Researcher, and Mentor</p>
+            <a href="{% url 'about' %}" class="btn btn-light btn-lg animated fadeIn">Learn More About Me</a>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        I am an AI specialist, researcher, and programmer with a passion for improving educational technology. Currently, I'm working on integrating my platform EduTech+ with the Rwandan education system to enhance personalized learning experiences. I also have expertise in various programming languages, including PHP, HTML, CSS, JavaScript, and Python.
+                    </p>
+                    <p>
+                        I'm a mentor at the Rising Star Mentorship Program and a participant in the Aguka Ideation Entrepreneurship Programme, supported by the Tony Elumelu Foundation.
+                    </p>
+                    <a href="{% url 'about' %}" class="btn btn-primary">Read More</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'images/lambert.jpg' %}" alt="Profile Picture" class="img-fluid rounded-circle shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">My Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow border-light">
+                        <img src="{% static 'images/project1.jpg' %}" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">EduTech+</h5>
+                            <p class="card-text">A platform designed to bridge educational gaps through personalized learning.</p>
+                            <a href="{% url 'projects' %}" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow border-light">
+                        <img src="{% static 'images/project2.jpg' %}" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Homelink Services</h5>
+                            <p class="card-text">Providing quality housemaid services to families and homes in Rwanda.</p>
+                            <a href="{% url 'projects' %}" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow border-light">
+                        <img src="{% static 'images/project3.jpg' %}" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">AI-Based Basketball Analysis</h5>
+                            <p class="card-text">A project that analyzes basketball movements using object detection and tracking algorithms.</p>
+                            <a href="{% url 'projects' %}" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
+            <div>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
+                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for scroll effects -->
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.querySelector(".back-to-top");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+
+</body>
+
+</html>
