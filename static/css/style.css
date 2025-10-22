@@ -1,0 +1,417 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+#header {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    padding: 20px 0;
+}
+
+.profile img {
+    width: 150px; /* Consistent profile image size */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+h1.text-light a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Base Navigation Styles */
+.navbar {
+    font-family: 'Poppins', sans-serif; /* Enhanced font */
+    font-weight: 600; /* Slightly bold */
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+    font-size: 1.8rem; /* Increase font size for the brand */
+    font-weight: 700; /* Bold the brand name */
+    letter-spacing: 2px; /* Slightly space out the letters */
+}
+
+/* Navbar links styling */
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem; /* Increase font size of navbar items */
+    font-weight: 600; /* Bold the text */
+    text-transform: uppercase; /* Capitalize navbar links */
+    letter-spacing: 1px; /* Add spacing between letters */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #fff; /* Change link color to white on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Navbar background color and text color */
+.navbar-dark.bg-primary {
+    background-color: #007bff !important; /* Primary blue background */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Change hamburger icon color */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.4rem; /* Larger font size for smaller screens */
+    }
+
+    .navbar-brand {
+        font-size: 2rem; /* Larger brand name for smaller screens */
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(250, 247, 247, 0.8)), url('../images/e-learning.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0; /* Increased padding for spacious feel */
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Larger font size for emphasis */
+    font-weight: 700; /* Bold font weight for header */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Add uppercase for stronger emphasis */
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.8rem; /* Increased font size for readability */
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.hero .btn {
+    font-size: 1.2rem; /* Larger button text */
+    padding: 15px 25px; /* Spacious padding */
+    border-radius: 25px; /* Rounded button corners */
+    text-transform: uppercase; /* Button text in uppercase */
+    letter-spacing: 1px; /* Add letter spacing for a neat look */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ff5722; /* Change background color on hover */
+    transform: translateY(-5px); /* Add lift effect on hover */
+}
+
+/* About Me Section */
+#about {
+    padding: 80px 0;
+    background-color: #496785; /* Enhanced background color */
+}
+
+#about h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* All caps for more emphasis */
+}
+
+/* Content Section Styling */
+#about .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Add space between columns */
+}
+
+#about .col-md-6 {
+    flex: 1;
+}
+
+#about .p-4 {
+    background-color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    border-radius: 10px; /* Round borders for cleaner look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    padding: 20px;
+}
+
+#about .p-4 a.btn-primary {
+    background-color: #007bff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#about .p-4 a.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Profile Image Styling */
+#about .img-container img {
+    max-width: 80%; /* Increased width for larger image */
+    border: 6px solid #fff; /* Make border cleaner */
+    border-radius: 50%; /* Circular profile image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add soft shadow to image */
+    transition: transform 0.3s ease;
+}
+
+#about .img-container img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 25px; /* Rounded buttons */
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #007bff;
+}
+
+.btn-light:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    display: none; /* Initially hidden */
+    transition: background 0.3s;
+}
+
+.back-to-top:hover {
+    background: #0056b3; /* Change color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .profile img {
+        width: 120px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        margin: 10px; /* Uniform spacing for cards */
+    }
+}
+
+/* Custom Font */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar-dark.bg-primary {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/e-learning.jpg');
+}
+
+body.dark-mode #about {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode #about h2 {
+  color: #ffffff;
+}
+
+body.dark-mode #about p {
+  color: #cccccc;
+}
+
+body.dark-mode .card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .btn-outline-light {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+body.dark-mode .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode .bg-light {
+  background-color: #2d2d2d !important;
+}
+
+body.dark-mode .card {
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+
+body.dark-mode .text-dark {
+  color: #ffffff !important;
+}
+
+body.dark-mode .pagination .page-link {
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+
+body.dark-mode .pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+body.dark-mode .form-control {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  border-color: #555;
+}
+
+body.dark-mode .form-control:focus {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+body.dark-mode .border {
+  border-color: #555 !important;
+}
+
+body.dark-mode .shadow-lg {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* About Section */
+#about {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+#about .container {
+  max-width: 1200px;
+}
+
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+#about .btn-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#about .img-container {
+  text-align: center;
+}
+
+#about img {
+  max-width: 75%;
+  border: 5px solid #ddd;
+  border-radius: 50%;
+}
+
+#about .border {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

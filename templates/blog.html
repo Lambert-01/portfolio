@@ -2,62 +2,65 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="NDACYAYISABA Lambert">
-    <meta name="description" content="Blog by NDACYAYISABA Lambert sharing insights on AI, educational technology, and more">
+    <meta name="description" content="Blog by NDACYAYISABA Lambert - AI Specialist and Software Engineer. Insights on AI, machine learning, and technology in Rwanda.">
     <title>Blog | NDACYAYISABA Lambert</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-   {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    
+    <link rel="stylesheet" href="{% static'css/style.css' %}">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static'images/favicon.png' %}" type="image/x-icon">
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{% static 'images/logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-                NDACYAYISABA Lambert
+                <img src="{% static'images/logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-top"> NDACYAYISABA Lambert
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" href="{% urlindex' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                        <a class="nav-link" href="{% urlabout' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                        <a class="nav-link" href="{% urlprojects' %}">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link" href="{% urlcontact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'blog' %}">Blog</a>
+                        <a class="nav-link active" href="{% urlblog' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+                        <a class="nav-link" href="{% urlresume' %}">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-light ms-2"><i class="fas fa-moon"></i></button>
                     </li>
                 </ul>
             </div>
@@ -65,7 +68,7 @@
     </nav>
 
     <!-- Blog Section -->
-    <section id="blog" class="py-5">
+    <section id="blog" class="py-5" data-aos="fade-up">
         <div class="container">
             <h2 class="text-center mb-4">Latest Posts</h2>
 
@@ -74,11 +77,11 @@
                 <!-- Post 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{% static 'images/blog1.jpg' %}" class="card-img-top" alt="Blog Post 1">
+                        <img src="{% static'images/blog1.jpg' %}" class="card-img-top" alt="Blog Post 1">
                         <div class="card-body">
                             <h5 class="card-title">The Future of AI in Education</h5>
                             <p class="card-text">Artificial intelligence has the potential to revolutionize education by providing personalized learning experiences. Here's a deep dive into how AI can transform the classroom...</p>
-                            <a href="{% url 'blog_post_1' %}" class="btn btn-primary">Read More</a>
+                            <a href="{% urlblog_post_1' %}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -86,11 +89,11 @@
                 <!-- Post 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{% static 'images/blog2.jpg' %}" class="card-img-top" alt="Blog Post 2">
+                        <img src="{% static'images/blog2.jpg' %}" class="card-img-top" alt="Blog Post 2">
                         <div class="card-body">
                             <h5 class="card-title">How E-Learning is Changing Rwanda</h5>
                             <p class="card-text">E-learning is gaining traction in Rwanda, with government initiatives and new technologies paving the way for greater accessibility and better educational outcomes...</p>
-                            <a href="{% url 'blog_post_2' %}" class="btn btn-primary">Read More</a>
+                            <a href="{% urlblog_post_2' %}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -98,11 +101,11 @@
                 <!-- Post 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{% static 'images/blog3.jpg' %}" class="card-img-top" alt="Blog Post 3">
+                        <img src="{% static'images/blog3.jpg' %}" class="card-img-top" alt="Blog Post 3">
                         <div class="card-body">
                             <h5 class="card-title">Building a Career in AI: Tips for Beginners</h5>
                             <p class="card-text">As artificial intelligence continues to grow, so do career opportunities. Here's a guide for those looking to start a career in AI...</p>
-                            <a href="{% url 'blog_post_3' %}" class="btn btn-primary">Read More</a>
+                            <a href="{% urlblog_post_3' %}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -138,17 +141,37 @@
         <div class="container">
             <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
             <div>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Lambert-01" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
+                <a href="mailto:nlambert833@gmail.com" class="text-white"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+    </script>
 
 </body>
 
