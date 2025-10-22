@@ -2,45 +2,45 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="NDACYAYISABA Lambert">
-    <meta name="description" content="About NDACYAYISABA Lambert - AI Specialist, Programmer, Researcher, and Mentor">
+    <meta name="description" content="About NDACYAYISABA Lambert - AI Specialist, Applied Mathematician, and Software Engineer from Rwanda. Learn about my experience in AI, machine learning, and social innovation.">
     <title>About | NDACYAYISABA Lambert</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-{% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{% static 'images/logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-                NDACYAYISABA Lambert
+                <img src="{% static 'images/logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-top"> NDACYAYISABA Lambert
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
@@ -53,28 +53,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-light ms-2"><i class="fas fa-moon"></i></button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- About Me Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-5" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h2>About Me</h2>
                     <p>
-                        Hello, I'm <strong>NDACYAYISABA Lambert</strong>, an AI specialist, programmer, researcher, and mentor. I have a deep passion for educational technology and am working on bridging educational gaps through personalized learning platforms such as <strong>EduTech+</strong>. My academic background in applied mathematics and artificial intelligence has shaped my perspective on using data and technology to enhance learning experiences.
+                        Hello, I'm <strong>NDACYAYISABA Lambert</strong>, a creative and analytical applied mathematician and software engineer with a passion for building impactful technology in autonomy, machine learning, and social innovation. Experienced in developing end-to-end tools and platforms using Python, PHP, and modern web technologies. Deeply interested in the intersection of robotics, AI, and accessibility.
                     </p>
                     <p>
-                        I am also the founder of <strong>Homelink Services</strong>, a company dedicated to providing quality housemaid services in Rwanda. Through this venture, I strive to empower local workers and help families meet their domestic needs efficiently. 
+                        I am the Co-Founder and Developer of <strong>Homelink Services</strong>, a digital platform for domestic worker services in Rwanda, aimed at digitizing the informal sector to enhance job dignity and service transparency. I am also an Innovation Grant Recipient from the HATANA Bootcamp, where I won a $5,000 grant for my pitch and prototype.
                     </p>
                     <p>
-                        Beyond my projects, I am actively involved in mentoring young minds through the <strong>Rising Star Mentorship Program</strong>, and I’m a participant in the <strong>Aguka Ideation Entrepreneurship Programme</strong>, supported by the Tony Elumelu Foundation and UNDP Rwanda.
+                        As a Youth Facilitator at NDABAGA Impact NGO, I facilitated workshops on life skills, leadership, and digital literacy. I have experience as a Web Developer for Nhonest Supermarket, building an e-commerce site with features like product catalog, user authentication, and admin dashboard.
                     </p>
                     <p>
-                        I have a keen interest in improving the quality of education in Rwanda, and I aim to integrate my platform <strong>EduTech+</strong> into the national education system to make learning more accessible, engaging, and tailored to the needs of individual learners.
+                        I am deeply interested in the intersection of AI and education, and I am committed to using technology to solve real-world problems in Rwanda and beyond.
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -85,34 +88,67 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
+    <section id="skills" class="bg-light py-5" data-aos="fade-up">
         <div class="container">
             <h2 class="text-center mb-4">Skills & Expertise</h2>
             <div class="row">
                 <div class="col-md-4">
+                    <h5>AI/ML & Analytics</h5>
+                    <ul>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>Scikit-learn</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>PowerBI</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
                     <h5>Programming Languages</h5>
                     <ul>
                         <li>Python</li>
-                        <li>PHP</li>
                         <li>JavaScript</li>
-                        <li>HTML & CSS</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                        <li>MATLAB</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Tools & Frameworks</h5>
+                    <h5>Web & Mobile</h5>
                     <ul>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Next.js</li>
+                        <li>HTML5/CSS3</li>
                         <li>Bootstrap</li>
-                        <li>OpenCV</li>
-                        <li>PyTorch</li>
-                        <li>NumPy</li>
+                        <li>Android Studio</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Cloud & DevOps</h5>
+                    <ul>
+                        <li>AWS</li>
+                        <li>Git</li>
+                        <li>Docker</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Project Management</h5>
+                    <h5>Metadata & Open Data</h5>
                     <ul>
-                        <li>Agile Methodology</li>
-                        <li>Jira</li>
-                        <li>Trello</li>
+                        <li>JSON Schema</li>
+                        <li>CKAN</li>
+                        <li>JKAN</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Languages</h5>
+                    <ul>
+                        <li>English (Native Proficiency)</li>
+                        <li>French (Professional Working)</li>
+                        <li>Kinyarwanda (Native Speaker)</li>
                     </ul>
                 </div>
             </div>
@@ -120,17 +156,17 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-5">
+    <section id="education" class="py-5" data-aos="fade-up">
         <div class="container">
             <h2 class="text-center mb-4">Education</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h5>University of Rwanda</h5>
+                    <h5>University of Rwanda - College of Science & Technology</h5>
                     <p><strong>Bachelor of Science in Applied Mathematics</strong> (Expected 2025)</p>
                 </div>
                 <div class="col-md-6">
-                    <h5>ALX - Artificial Intelligence Courses</h5>
-                    <p><strong>AI Virtual Assistant Program</strong> (Completed 2024)</p>
+                    <h5>Petit Séminaire de Rwesero</h5>
+                    <p><strong>Advanced Certificate (A-Level)</strong> Mathematics, Physics, Chemistry (2014 – 2021, Distinction)</p>
                 </div>
             </div>
         </div>
@@ -141,17 +177,37 @@
         <div class="container">
             <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
             <div>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Lambert-01" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
+                <a href="mailto:nlambert833@gmail.com" class="text-white"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+    </script>
 
 </body>
 
