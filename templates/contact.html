@@ -15,6 +15,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -52,69 +53,479 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="py-5 particle-bg rainbow-gradient position-relative overflow-hidden">
+        <div class="container position-relative">
+
+            <!-- Floating Background Elements -->
+            <div class="floating-orb" style="top: 20%; left: 5%; width: 100px; height: 100px;"></div>
+            <div class="floating-orb" style="bottom: 30%; right: 10%; width: 80px; height: 80px; animation-delay: 2s;"></div>
+            <div class="spiral-element" style="bottom: 10%; left: 50%; transform: translateX(-50%);"></div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="glow-text display-4 mb-4">Get In Touch</h2>
+                    <p class="lead">
+                        Ready to collaborate on innovative AI solutions? Let's connect!
+                    </p>
+                </div>
+            </div>
 
             <div class="row">
-                <!-- Contact Form -->
+                <!-- Enhanced Contact Form -->
                 <div class="col-md-8">
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    <div class="geometric-border p-4">
+                        <h4 class="glow-text mb-4 text-center">
+                            <i class="fas fa-paper-plane text-primary mr-2"></i>
+                            Send Message
+                        </h4>
+
+                        <form action="#" method="POST" class="contact-form" id="contactForm">
+                            <div class="form-group mb-4">
+                                <label for="contactName" class="text-primary font-weight-bold">
+                                    <i class="fas fa-user mr-2"></i>Full Name
+                                </label>
+                                <input type="text" class="form-control enhanced-input" id="contactName" name="name"
+                                       placeholder="Enter your full name" required autocomplete="name">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="contactEmail" class="text-primary font-weight-bold">
+                                    <i class="fas fa-envelope mr-2"></i>Email Address
+                                </label>
+                                <input type="email" class="form-control enhanced-input" id="contactEmail" name="email"
+                                       placeholder="your.email@example.com" required autocomplete="email">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="contactMessage" class="text-primary font-weight-bold">
+                                    <i class="fas fa-comment mr-2"></i>Your Message
+                                </label>
+                                <textarea class="form-control enhanced-textarea" id="contactMessage" name="message"
+                                          rows="5" placeholder="Tell me about your project or collaboration idea..." required
+                                          style="resize: vertical; min-height: 120px;" autocomplete="off"></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 py-3 hover-lift">
+                                    <i class="fas fa-rocket mr-2"></i>Send Message
+                                    <span class="btn-ripple"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
-                <!-- Contact Information -->
+                <!-- Enhanced Contact Information -->
                 <div class="col-md-4">
-                    <h5>Contact Information</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
-                    <p><i class="fas fa-phone-alt"></i> +250 790311401</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">nlambert833@gmai.com</a></p>
-                    <h5>Social Media</h5>
-                    <div>
-                        <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/" target="_blank" class="text-dark mr-3"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
-                        <a href="https://github.com/Lambert-01" target="_blank" class="text-dark mr-3"><i class="fab fa-github"></i> GitHub</a><br>
-                        <a href="https://x.com/LambertZar" target="_blank" class="text-dark mr-3"><i class="fab fa-twitter"></i> Twitter</a>
+                    <div class="geometric-border p-4 h-100">
+                        <h5 class="glow-text mb-4 text-center">
+                            <i class="fas fa-address-card text-primary mr-2"></i>
+                            Contact Info
+                        </h5>
+
+                        <div class="contact-info">
+                            <div class="info-item mb-4">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-primary">Location</h6>
+                                    <p class="mb-0">Kigali, Rwanda</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-4">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone-alt text-success"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-success">Phone</h6>
+                                    <p class="mb-0">+250 790311401</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-4">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope text-warning"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-warning">Email</h6>
+                                    <p class="mb-0">
+                                        <a href="mailto:nlambert833@gmail.com" class="text-muted">
+                                            nlambert833@gmail.com
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="social-links-enhanced mt-5">
+                            <h6 class="glow-text mb-3 text-center">Connect With Me</h6>
+                            <div class="social-buttons text-center">
+                                <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/"
+                                   target="_blank" class="social-btn linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+
+                                <a href="https://github.com/Lambert-01"
+                                   target="_blank" class="social-btn github">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+
+                                <a href="https://x.com/LambertZar"
+                                   target="_blank" class="social-btn twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Contact Options -->
+                        <div class="quick-contact mt-5">
+                            <h6 class="glow-text mb-3 text-center">Quick Actions</h6>
+                            <div class="text-center">
+                                <a href="mailto:nlambert833@gmail.com" class="btn btn-outline-primary btn-sm mr-2 mb-2">
+                                    <i class="fas fa-envelope mr-1"></i>Email Me
+                                </a>
+                                <a href="https://calendly.com/lambert-ai" target="_blank" class="btn btn-outline-success btn-sm mb-2">
+                                    <i class="fas fa-calendar-alt mr-1"></i>Schedule Call
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
-            <div>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+    <!-- Enhanced Modern Footer -->
+    <footer class="footer-section position-relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="footer-bg"></div>
+        <div class="floating-orb orb-6"></div>
+        <div class="floating-orb orb-7"></div>
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <!-- Main Footer Content -->
+                <div class="col-lg-8">
+                    <!-- Brand Section -->
+                    <div class="text-center mb-4">
+                        <h3 class="footer-brand mb-3">
+                            <span style="color: #00A1F1;">NDACYAYISABA</span>
+                            <span style="color: #FCDD09;"> Lambert</span>
+                        </h3>
+                        <p class="footer-tagline mb-4" style="color: rgba(255, 255, 255, 0.8);">
+                            AI Specialist • Educational Technology Innovator • Researcher • Mentor
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-grid mb-5">
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 161, 241, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-envelope contact-icon mb-2" style="color: #00A1F1; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Email</div>
+                            <a href="mailto:nlambert833@gmail.com" class="contact-link" style="color: #ffffff;">nlambert833@gmail.com</a>
+                        </div>
+
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 175, 39, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-phone contact-icon mb-2" style="color: #00AF27; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Phone</div>
+                            <a href="tel:+2507903111401" class="contact-link" style="color: #ffffff;">+250 790 311 401</a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-media-section text-center mb-4">
+                        <h5 class="mb-3" style="color: #FCDD09;">Connect With Me</h5>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/"
+                               target="_blank"
+                               class="social-link linkedin"
+                               data-tooltip="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/LambertZar"
+                               target="_blank"
+                               class="social-link twitter"
+                               data-tooltip="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/Lambert-01"
+                               target="_blank"
+                               class="social-link github"
+                               data-tooltip="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <div class="footer-bottom text-center">
+                        <div class="footer-divider mb-3">
+                            <div class="divider-line"></div>
+                            <div class="divider-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-line"></div>
+                        </div>
+                        <p class="mb-2" style="color: rgba(255, 255, 255, 0.7);">
+                            &copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.
+                        </p>
+                        <p class="mb-0" style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                            Bridging educational gaps through innovative AI solutions in Rwanda
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script src="{% static 'js/enhancements.js' %}"></script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Contact Page Specific Enhancements -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhanced form interactions
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+
+            const inputs = form.querySelectorAll('input, textarea');
+
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('input-focused');
+                });
+
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('input-focused');
+                });
+            });
+
+            // Button ripple effect
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('btn-ripple');
+                    this.appendChild(ripple);
+
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                    ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            }
+
+            // Form submission enhancement
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                if (submitBtn) {
+                    // Show loading state
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                    submitBtn.disabled = true;
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Sent!';
+                        submitBtn.classList.add('btn-success');
+
+                        setTimeout(() => {
+                            submitBtn.innerHTML = '<i class="fas fa-rocket mr-2"></i>Send Message';
+                            submitBtn.classList.remove('btn-success');
+                            submitBtn.disabled = false;
+                            form.reset();
+                        }, 2000);
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Enhanced form styling - Fixed for proper input functionality */
+        .enhanced-input, .enhanced-textarea {
+            border: 2px solid rgba(0, 161, 241, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem;
+            background: rgba(0, 0, 0, 0.8) !important;
+            transition: all 0.3s ease;
+            color: #ffffff !important;
+            font-weight: 400;
+            text-shadow: none;
+            box-shadow: 0 2px 8px rgba(0, 161, 241, 0.2);
+        }
+
+        .enhanced-input::placeholder, .enhanced-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        /* Enhanced contact info styling */
+        .info-item h6 {
+            color: white !important;
+            font-weight: 700;
+            text-shadow:
+                0 0 8px rgba(255, 255, 255, 0.8),
+                0 0 15px rgba(255, 102, 0, 0.6);
+            filter: brightness(1.3) contrast(1.2);
+        }
+
+        .info-item p {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .enhanced-input:focus, .enhanced-textarea:focus {
+            border-color: #00A1F1;
+            box-shadow: 0 0 10px rgba(0, 161, 241, 0.4);
+            background: rgba(0, 0, 0, 0.9) !important;
+            outline: none;
+            color: #ffffff !important;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .input-focused label {
+            color: #00A1F1;
+            transform: translateY(-5px);
+        }
+
+        /* Ensure form elements are fully interactive */
+        .enhanced-input, .enhanced-textarea {
+            cursor: text !important;
+            user-select: text;
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            opacity: 1;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Improve text visibility and functionality */
+        .enhanced-input:focus, .enhanced-textarea:focus {
+            color: #ffffff !important;
+            background: rgba(0, 0, 0, 0.9) !important;
+        }
+
+        /* Ensure labels work properly */
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Fix any overlay issues */
+        .geometric-border {
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateX(10px);
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(168, 85, 247, 0.2));
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-btn span {
+            margin-left: 0.5rem;
+        }
+
+        .social-btn.linkedin {
+            background: linear-gradient(135deg, #0077b5, #005885);
+        }
+
+        .social-btn.github {
+            background: linear-gradient(135deg, #333, #24292e);
+        }
+
+        .social-btn.twitter {
+            background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
 
 </body>
 

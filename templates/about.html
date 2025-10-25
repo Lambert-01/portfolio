@@ -15,6 +15,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
     
 
     <!-- Font Awesome for Icons -->
@@ -53,67 +54,271 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- About Me Section -->
-    <section id="about" class="py-5">
+    <!-- Enhanced About Me Section -->
+    <section id="about" class="py-5 particle-bg circuit-pattern position-relative">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About Me</h2>
-                    <p>
-                        Hello, I'm <strong>NDACYAYISABA Lambert</strong>, an AI specialist, programmer, researcher, and mentor. I have a deep passion for educational technology and am working on bridging educational gaps through personalized learning platforms such as <strong>EduTech+</strong>. My academic background in applied mathematics and artificial intelligence has shaped my perspective on using data and technology to enhance learning experiences.
-                    </p>
-                    <p>
-                        I am also the founder of <strong>Homelink Services</strong>, a company dedicated to providing quality housemaid services in Rwanda. Through this venture, I strive to empower local workers and help families meet their domestic needs efficiently. 
-                    </p>
-                    <p>
-                        Beyond my projects, I am actively involved in mentoring young minds through the <strong>Rising Star Mentorship Program</strong>, and I’m a participant in the <strong>Aguka Ideation Entrepreneurship Programme</strong>, supported by the Tony Elumelu Foundation and UNDP Rwanda.
-                    </p>
-                    <p>
-                        I have a keen interest in improving the quality of education in Rwanda, and I aim to integrate my platform <strong>EduTech+</strong> into the national education system to make learning more accessible, engaging, and tailored to the needs of individual learners.
+
+            <!-- Floating Background Elements -->
+            <div class="floating-orb" style="top: 15%; right: 10%; width: 120px; height: 120px;"></div>
+            <div class="floating-orb" style="bottom: 25%; left: 8%; width: 80px; height: 80px; animation-delay: 3s;"></div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="glow-text display-4 mb-4">About Me</h2>
+                    <p class="lead">
+                        Passionate AI specialist and educational technology innovator from Rwanda
                     </p>
                 </div>
+            </div>
+
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="{% static 'images/lambert.jpg' %}" alt="Profile Picture" class="img-fluid rounded-circle">
+                    <div class="geometric-border p-4 h-100">
+                        <h3 class="glow-text mb-4">
+                            <i class="fas fa-user-astronaut text-primary mr-3"></i>
+                            AI Specialist & Researcher
+                        </h3>
+
+                        <div class="about-content">
+                            <p class="mb-4">
+                                Hello! I'm <strong class="text-gradient">NDACYAYISABA Lambert</strong>, a passionate AI specialist, programmer, researcher, and mentor dedicated to transforming education through technology.
+                            </p>
+
+                            <div class="highlight-box mb-4">
+                                <h5 class="text-primary mb-3">
+                                    <i class="fas fa-lightbulb text-warning mr-2"></i>
+                                    My Mission
+                                </h5>
+                                <p>Bridging educational gaps through personalized learning platforms like <strong>EduTech+</strong>, using artificial intelligence to create tailored educational experiences.</p>
+                            </div>
+
+                            <div class="row text-center mb-4">
+                                <div class="col-6">
+                                    <div class="counter text-primary" data-target="5">0</div>
+                                    <small>Years AI Experience</small>
+                                </div>
+                                <div class="col-6">
+                                    <div class="counter text-success" data-target="10">0</div>
+                                    <small>AI Projects</small>
+                                </div>
+                            </div>
+
+                            <div class="tech-badges">
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Data Science</span>
+                                <span class="tech-tag">Educational Technology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="profile-image-container">
+                        <div class="geometric-border">
+                            <img src="{% static 'images/lambert.jpg' %}" alt="NDACYAYISABA Lambert"
+                                 class="img-fluid rounded-circle profile-image">
+                        </div>
+
+                        <!-- Floating badges around profile image -->
+                        <div class="profile-badges">
+                            <span class="profile-badge badge-python">
+                                <i class="fab fa-python"></i>
+                            </span>
+                            <span class="profile-badge badge-ai">
+                                <i class="fas fa-robot"></i>
+                            </span>
+                            <span class="profile-badge badge-rwanda">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
+    <!-- Enhanced Skills Section -->
+    <section id="skills" class="py-5 matrix-bg position-relative">
         <div class="container">
-            <h2 class="text-center mb-4">Skills & Expertise</h2>
+
+            <!-- Background floating elements -->
+            <div class="spiral-element" style="top: 20%; right: 10%;"></div>
+            <div class="data-stream" style="height: 200px; right: 20%; top: 30%;"></div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="glow-text display-4 mb-4">Skills & Expertise</h2>
+                    <p class="lead">
+                        Comprehensive technical skills across AI, development, and project management
+                    </p>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-md-4">
-                    <h5>Programming Languages</h5>
-                    <ul>
-                        <li>Python</li>
-                        <li>PHP</li>
-                        <li>JavaScript</li>
-                        <li>HTML & CSS</li>
-                    </ul>
+                <!-- Enhanced Programming Languages -->
+                <div class="col-md-4 mb-4">
+                    <div class="geometric-border h-100 p-4 text-center">
+                        <div class="skill-icon mb-3">
+                            <i class="fas fa-code text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="glow-text mb-4">Programming Languages</h5>
+
+                        <div class="skills-container">
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Python</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>JavaScript</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>PHP</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>HTML & CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h5>Tools & Frameworks</h5>
-                    <ul>
-                        <li>Bootstrap</li>
-                        <li>OpenCV</li>
-                        <li>PyTorch</li>
-                        <li>NumPy</li>
-                    </ul>
+
+                <!-- Enhanced Tools & Frameworks -->
+                <div class="col-md-4 mb-4">
+                    <div class="geometric-border h-100 p-4 text-center">
+                        <div class="skill-icon mb-3">
+                            <i class="fas fa-tools text-success" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="glow-text mb-4">AI & Frameworks</h5>
+
+                        <div class="skills-container">
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>PyTorch</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>OpenCV</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>NumPy</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Bootstrap</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h5>Project Management</h5>
-                    <ul>
-                        <li>Agile Methodology</li>
-                        <li>Jira</li>
-                        <li>Trello</li>
-                    </ul>
+
+                <!-- Enhanced Project Management -->
+                <div class="col-md-4 mb-4">
+                    <div class="geometric-border h-100 p-4 text-center">
+                        <div class="skill-icon mb-3">
+                            <i class="fas fa-project-diagram text-warning" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="glow-text mb-4">Project Management</h5>
+
+                        <div class="skills-container">
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Agile</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Jira</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Leadership</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Skills Cloud -->
+                        <div class="skills-cloud mt-4">
+                            <span class="skill-cloud-item">Team Management</span>
+                            <span class="skill-cloud-item">Strategic Planning</span>
+                            <span class="skill-cloud-item">Client Relations</span>
+                            <span class="skill-cloud-item">Innovation</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,22 +341,244 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
-            <div>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+    <!-- Enhanced Modern Footer -->
+    <footer class="footer-section position-relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="footer-bg"></div>
+        <div class="floating-orb orb-6"></div>
+        <div class="floating-orb orb-7"></div>
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <!-- Main Footer Content -->
+                <div class="col-lg-8">
+                    <!-- Brand Section -->
+                    <div class="text-center mb-4">
+                        <h3 class="footer-brand mb-3">
+                            <span style="color: #00A1F1;">NDACYAYISABA</span>
+                            <span style="color: #FCDD09;"> Lambert</span>
+                        </h3>
+                        <p class="footer-tagline mb-4" style="color: rgba(255, 255, 255, 0.8);">
+                            AI Specialist • Educational Technology Innovator • Researcher • Mentor
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-grid mb-5">
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 161, 241, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-envelope contact-icon mb-2" style="color: #00A1F1; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Email</div>
+                            <a href="mailto:nlambert833@gmail.com" class="contact-link" style="color: #ffffff;">nlambert833@gmail.com</a>
+                        </div>
+
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 175, 39, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-phone contact-icon mb-2" style="color: #00AF27; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Phone</div>
+                            <a href="tel:+2507903111401" class="contact-link" style="color: #ffffff;">+250 790 311 401</a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-media-section text-center mb-4">
+                        <h5 class="mb-3" style="color: #FCDD09;">Connect With Me</h5>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/"
+                               target="_blank"
+                               class="social-link linkedin"
+                               data-tooltip="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/LambertZar"
+                               target="_blank"
+                               class="social-link twitter"
+                               data-tooltip="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/Lambert-01"
+                               target="_blank"
+                               class="social-link github"
+                               data-tooltip="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <div class="footer-bottom text-center">
+                        <div class="footer-divider mb-3">
+                            <div class="divider-line"></div>
+                            <div class="divider-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-line"></div>
+                        </div>
+                        <p class="mb-2" style="color: rgba(255, 255, 255, 0.7);">
+                            &copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.
+                        </p>
+                        <p class="mb-0" style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                            Bridging educational gaps through innovative AI solutions in Rwanda
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script src="{% static 'js/enhancements.js' %}"></script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- About Page Specific Enhancements -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate skill bars when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-progress');
+                        skillBars.forEach((bar, index) => {
+                            setTimeout(() => {
+                                const width = bar.getAttribute('data-width') || '80%';
+                                bar.style.width = width;
+                            }, index * 200);
+                        });
+                    }
+                });
+            });
+
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+
+            // Add hover effects to skill items
+            document.querySelectorAll('.skill-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(10px)';
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* Additional styles for about page */
+        .profile-image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 4px solid rgba(0, 212, 255, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .profile-image:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .profile-badges {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .profile-badge {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            animation: badgeFloat 4s ease-in-out infinite;
+        }
+
+        .badge-python {
+            top: 10%;
+            right: 10%;
+            background: linear-gradient(135deg, #3776ab, #ffd43b);
+            color: white;
+            animation-delay: 0s;
+        }
+
+        .badge-ai {
+            bottom: 15%;
+            right: 5%;
+            background: linear-gradient(135deg, #00d4ff, #a855f7);
+            color: white;
+            animation-delay: 1s;
+        }
+
+        .badge-rwanda {
+            top: 5%;
+            left: 8%;
+            background: linear-gradient(135deg, #059669, #f59e0b);
+            color: white;
+            animation-delay: 2s;
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(5deg); }
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(168, 85, 247, 0.1));
+            border-left: 4px solid #00d4ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .tech-badges {
+            margin-top: 2rem;
+        }
+
+        .skills-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-cloud-item {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(168, 85, 247, 0.1));
+            color: #00d4ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ff6600, #00ff88, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            text-shadow:
+                0 0 15px rgba(255, 102, 0, 0.8),
+                0 0 30px rgba(0, 255, 136, 0.6),
+                0 0 45px rgba(0, 153, 255, 0.4);
+            filter: brightness(1.4) contrast(1.2);
+        }
+    </style>
 
 </body>
 

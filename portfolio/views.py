@@ -14,9 +14,6 @@ def projects(request):
 def contact(request):
     return render(request, 'contact.html')  # Render contact.html
 
-def resume(request):
-    return render(request, 'resume.html')  # Render resume.html
-
 def blog(request):
     return render(request, 'blog.html')  # Render blog.html
 

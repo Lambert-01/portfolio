@@ -15,6 +15,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
     
 
     <!-- Font Awesome for Icons -->
@@ -57,52 +58,142 @@
                         <a class="nav-link active" href="{% url 'blog' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Blog Section -->
-    <section id="blog" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Latest Posts</h2>
+    <!-- Enhanced Blog Section -->
+    <section id="blog" class="py-5 particle-bg matrix-bg position-relative">
+        <div class="container position-relative">
 
-            <!-- Blog Posts -->
-            <div class="row">
-                <!-- Post 1 -->
+            <!-- Floating Background Elements -->
+            <div class="floating-orb" style="top: 15%; left: 8%; width: 90px; height: 90px;"></div>
+            <div class="floating-orb" style="bottom: 25%; right: 12%; width: 70px; height: 70px; animation-delay: 3s;"></div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="glow-text display-4 mb-4">AI Insights & Blog</h2>
+                    <p class="lead">
+                        Exploring the intersection of artificial intelligence, education, and Rwandan innovation
+                    </p>
+                </div>
+            </div>
+
+            <!-- Enhanced Blog Posts -->
+            <div class="row position-relative">
+                <!-- Enhanced Post 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'images/blog1.jpg' %}" class="card-img-top" alt="Blog Post 1">
-                        <div class="card-body">
-                            <h5 class="card-title">The Future of AI in Education</h5>
-                            <p class="card-text">Artificial intelligence has the potential to revolutionize education by providing personalized learning experiences. Here's a deep dive into how AI can transform the classroom...</p>
-                            <a href="{% url 'blog_post_1' %}" class="btn btn-primary">Read More</a>
+                    <div class="card holographic-card advanced-hover blog-card">
+                        <div class="geometric-border h-100">
+                            <div class="card-image-container">
+                                <img src="{% static 'images/blog1.jpg' %}" class="card-img-top" alt="AI in Education">
+                                <div class="card-overlay">
+                                    <span class="badge-ai">AI</span>
+                                    <span class="badge-education">Education</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="blog-meta mb-3">
+                                    <span class="blog-date">
+                                        <i class="fas fa-calendar-alt mr-1"></i>Oct 15, 2024
+                                    </span>
+                                    <span class="blog-read-time">
+                                        <i class="fas fa-clock mr-1"></i>5 min read
+                                    </span>
+                                </div>
+
+                                <h5 class="card-title glow-text">The Future of AI in Education</h5>
+                                <p class="card-text">Exploring how artificial intelligence is revolutionizing personalized learning experiences and transforming classrooms worldwide...</p>
+
+                                <div class="blog-tags mb-3">
+                                    <span class="blog-tag">Machine Learning</span>
+                                    <span class="blog-tag">EdTech</span>
+                                    <span class="blog-tag">Innovation</span>
+                                </div>
+
+                                <a href="https://medium.com/@lambert-ai/the-future-of-ai-in-education" target="_blank" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Read Article
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Post 2 -->
+                <!-- Enhanced Post 2 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'images/blog2.jpg' %}" class="card-img-top" alt="Blog Post 2">
-                        <div class="card-body">
-                            <h5 class="card-title">How E-Learning is Changing Rwanda</h5>
-                            <p class="card-text">E-learning is gaining traction in Rwanda, with government initiatives and new technologies paving the way for greater accessibility and better educational outcomes...</p>
-                            <a href="{% url 'blog_post_2' %}" class="btn btn-primary">Read More</a>
+                    <div class="card holographic-card advanced-hover blog-card">
+                        <div class="geometric-border h-100">
+                            <div class="card-image-container">
+                                <img src="{% static 'images/blog2.jpg' %}" class="card-img-top" alt="E-Learning Rwanda">
+                                <div class="card-overlay">
+                                    <span class="badge-rwanda">Rwanda</span>
+                                    <span class="badge-education">E-Learning</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="blog-meta mb-3">
+                                    <span class="blog-date">
+                                        <i class="fas fa-calendar-alt mr-1"></i>Oct 10, 2024
+                                    </span>
+                                    <span class="blog-read-time">
+                                        <i class="fas fa-clock mr-1"></i>7 min read
+                                    </span>
+                                </div>
+
+                                <h5 class="card-title glow-text">E-Learning Revolution in Rwanda</h5>
+                                <p class="card-text">How digital transformation and government initiatives are making quality education accessible to every Rwandan student...</p>
+
+                                <div class="blog-tags mb-3">
+                                    <span class="blog-tag">Digital Transformation</span>
+                                    <span class="blog-tag">Africa</span>
+                                    <span class="blog-tag">Policy</span>
+                                </div>
+
+                                <a href="https://medium.com/@lambert-ai/e-learning-revolution-rwanda" target="_blank" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Read Article
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Post 3 -->
+                <!-- Enhanced Post 3 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'images/blog3.jpg' %}" class="card-img-top" alt="Blog Post 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Building a Career in AI: Tips for Beginners</h5>
-                            <p class="card-text">As artificial intelligence continues to grow, so do career opportunities. Here's a guide for those looking to start a career in AI...</p>
-                            <a href="{% url 'blog_post_3' %}" class="btn btn-primary">Read More</a>
+                    <div class="card holographic-card advanced-hover blog-card">
+                        <div class="geometric-border h-100">
+                            <div class="card-image-container">
+                                <img src="{% static 'images/blog3.jpg' %}" class="card-img-top" alt="AI Career Guide">
+                                <div class="card-overlay">
+                                    <span class="badge-career">Career</span>
+                                    <span class="badge-ai">AI</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="blog-meta mb-3">
+                                    <span class="blog-date">
+                                        <i class="fas fa-calendar-alt mr-1"></i>Oct 5, 2024
+                                    </span>
+                                    <span class="blog-read-time">
+                                        <i class="fas fa-clock mr-1"></i>8 min read
+                                    </span>
+                                </div>
+
+                                <h5 class="card-title glow-text">Building Your AI Career Path</h5>
+                                <p class="card-text">Comprehensive guide for aspiring AI professionals, from learning resources to career opportunities in Africa's growing tech sector...</p>
+
+                                <div class="blog-tags mb-3">
+                                    <span class="blog-tag">Career Development</span>
+                                    <span class="blog-tag">AI/ML</span>
+                                    <span class="blog-tag">Africa Tech</span>
+                                </div>
+
+                                <a href="https://medium.com/@lambert-ai/building-ai-career-path" target="_blank" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Read Article
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,22 +224,235 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
-            <div>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+    <!-- Enhanced Modern Footer -->
+    <footer class="footer-section position-relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="footer-bg"></div>
+        <div class="floating-orb orb-6"></div>
+        <div class="floating-orb orb-7"></div>
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <!-- Main Footer Content -->
+                <div class="col-lg-8">
+                    <!-- Brand Section -->
+                    <div class="text-center mb-4">
+                        <h3 class="footer-brand mb-3">
+                            <span style="color: #00A1F1;">NDACYAYISABA</span>
+                            <span style="color: #FCDD09;"> Lambert</span>
+                        </h3>
+                        <p class="footer-tagline mb-4" style="color: rgba(255, 255, 255, 0.8);">
+                            AI Specialist • Educational Technology Innovator • Researcher • Mentor
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-grid mb-5">
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 161, 241, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-envelope contact-icon mb-2" style="color: #00A1F1; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Email</div>
+                            <a href="mailto:nlambert833@gmail.com" class="contact-link" style="color: #ffffff;">nlambert833@gmail.com</a>
+                        </div>
+
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 175, 39, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-phone contact-icon mb-2" style="color: #00AF27; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Phone</div>
+                            <a href="tel:+2507903111401" class="contact-link" style="color: #ffffff;">+250 790 311 401</a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-media-section text-center mb-4">
+                        <h5 class="mb-3" style="color: #FCDD09;">Connect With Me</h5>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/"
+                               target="_blank"
+                               class="social-link linkedin"
+                               data-tooltip="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/LambertZar"
+                               target="_blank"
+                               class="social-link twitter"
+                               data-tooltip="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/Lambert-01"
+                               target="_blank"
+                               class="social-link github"
+                               data-tooltip="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <div class="footer-bottom text-center">
+                        <div class="footer-divider mb-3">
+                            <div class="divider-line"></div>
+                            <div class="divider-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-line"></div>
+                        </div>
+                        <p class="mb-2" style="color: rgba(255, 255, 255, 0.7);">
+                            &copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.
+                        </p>
+                        <p class="mb-0" style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                            Bridging educational gaps through innovative AI solutions in Rwanda
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script src="{% static 'js/enhancements.js' %}"></script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Blog Page Specific Enhancements -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add reading progress indicator
+            const progressBar = document.createElement('div');
+            progressBar.className = 'reading-progress';
+            progressBar.innerHTML = '<div class="reading-progress-fill"></div>';
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                progressBar.querySelector('.reading-progress-fill').style.width = scrollPercent + '%';
+            });
+
+            // Enhanced card hover effects
+            document.querySelectorAll('.blog-card').forEach((card, index) => {
+                card.addEventListener('mouseenter', function() {
+                    // Add subtle animation delay for staggered effect
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-10px) scale(1.02)';
+                    }, index * 100);
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add click analytics for blog posts
+            document.querySelectorAll('.blog-card a').forEach(link => {
+                link.addEventListener('click', function() {
+                    const postTitle = this.closest('.card').querySelector('.card-title').textContent;
+                    console.log(`Blog post clicked: ${postTitle}`);
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* Enhanced Blog-specific styling */
+        .blog-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid transparent;
+            border-image: linear-gradient(135deg, #ff6600, #00ff88, #0099ff) 1;
+            box-shadow:
+                0 0 25px rgba(255, 102, 0, 0.15),
+                0 0 50px rgba(0, 255, 136, 0.1),
+                0 0 75px rgba(0, 153, 255, 0.1);
+        }
+
+        .card-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+
+        .badge-ai {
+            background: linear-gradient(135deg, #00d4ff, #a855f7);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+
+        .badge-education {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+        }
+
+        .badge-rwanda {
+            background: linear-gradient(135deg, #f59e0b, #92400e);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+        }
+
+        .badge-career {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .blog-tag {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .reading-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #a855f7);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+    </style>
 
 </body>
 

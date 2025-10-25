@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
     
 
     <!-- Font Awesome for Icons -->
@@ -60,30 +61,59 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{% url 'gallery' %}">Gallery</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resume' %}">Resume</a>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Gallery</h2>
-            <p class="text-center mb-4">Explore my work through this gallery of projects, photography, and other creative projects that showcase my skills and passions.</p>
+    <!-- Enhanced Gallery Section -->
+    <section id="gallery" class="py-5 particle-bg crystal-border position-relative overflow-hidden">
+        <div class="container position-relative">
 
-            <!-- Gallery Grid -->
-            <div class="row">
-                <!-- Image 1 -->
+            <!-- Floating Background Elements -->
+            <div class="floating-orb" style="top: 10%; left: 5%; width: 120px; height: 120px;"></div>
+            <div class="floating-orb" style="bottom: 20%; right: 8%; width: 90px; height: 90px; animation-delay: 2s;"></div>
+            <div class="spiral-element" style="top: 50%; right: 5%;"></div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="glow-text display-4 mb-4">Project Gallery</h2>
+                    <p class="lead">
+                        Visual showcase of AI innovations, educational technology, and creative projects
+                    </p>
+                </div>
+            </div>
+
+            <!-- Enhanced Gallery Grid -->
+            <div class="row position-relative">
+                <!-- Enhanced Gallery Item 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'images/gallery1.jpg' %}" class="card-img-top" alt="Gallery Image 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Description of the first project or photography piece that highlights my work and skills.</p>
-                            <a href="{% static 'images/gallery1.jpg' %}" class="btn btn-primary" target="_blank">View Full Image</a>
+                    <div class="card gallery-card holographic-card advanced-hover">
+                        <div class="geometric-border h-100">
+                            <div class="gallery-image-container">
+                                <img src="{% static 'images/gallery1.jpg' %}" class="card-img-top gallery-image" alt="AI Education Platform">
+                                <div class="gallery-overlay">
+                                    <button class="btn btn-light btn-sm gallery-btn" data-image="{% static 'images/gallery1.jpg' %}" data-title="AI Education Platform - Interactive Dashboard">
+                                        <i class="fas fa-expand-arrows-alt mr-1"></i>View Large
+                                    </button>
+                                </div>
+                                <div class="gallery-category">
+                                    <span class="category-badge">AI Platform</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title glow-text">EduTech+ Dashboard</h5>
+                                <p class="card-text">Interactive AI-powered learning management system with real-time analytics and personalized content delivery.</p>
+
+                                <div class="gallery-meta">
+                                    <span class="gallery-tech">
+                                        <i class="fab fa-python text-primary mr-1"></i>Python
+                                    </span>
+                                    <span class="gallery-tech">
+                                        <i class="fas fa-database text-success mr-1"></i>PostgreSQL
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -155,22 +185,286 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
-            <div>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+    <!-- Enhanced Modern Footer -->
+    <footer class="footer-section position-relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="footer-bg"></div>
+        <div class="floating-orb orb-6"></div>
+        <div class="floating-orb orb-7"></div>
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <!-- Main Footer Content -->
+                <div class="col-lg-8">
+                    <!-- Brand Section -->
+                    <div class="text-center mb-4">
+                        <h3 class="footer-brand mb-3">
+                            <span style="color: #00A1F1;">NDACYAYISABA</span>
+                            <span style="color: #FCDD09;"> Lambert</span>
+                        </h3>
+                        <p class="footer-tagline mb-4" style="color: rgba(255, 255, 255, 0.8);">
+                            AI Specialist • Educational Technology Innovator • Researcher • Mentor
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-grid mb-5">
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 161, 241, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-envelope contact-icon mb-2" style="color: #00A1F1; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Email</div>
+                            <a href="mailto:nlambert833@gmail.com" class="contact-link" style="color: #ffffff;">nlambert833@gmail.com</a>
+                        </div>
+
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 175, 39, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-phone contact-icon mb-2" style="color: #00AF27; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Phone</div>
+                            <a href="tel:+2507903111401" class="contact-link" style="color: #ffffff;">+250 790 311 401</a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-media-section text-center mb-4">
+                        <h5 class="mb-3" style="color: #FCDD09;">Connect With Me</h5>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/"
+                               target="_blank"
+                               class="social-link linkedin"
+                               data-tooltip="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/LambertZar"
+                               target="_blank"
+                               class="social-link twitter"
+                               data-tooltip="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/Lambert-01"
+                               target="_blank"
+                               class="social-link github"
+                               data-tooltip="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <div class="footer-bottom text-center">
+                        <div class="footer-divider mb-3">
+                            <div class="divider-line"></div>
+                            <div class="divider-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-line"></div>
+                        </div>
+                        <p class="mb-2" style="color: rgba(255, 255, 255, 0.7);">
+                            &copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.
+                        </p>
+                        <p class="mb-0" style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                            Bridging educational gaps through innovative AI solutions in Rwanda
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script src="{% static 'js/enhancements.js' %}"></script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Gallery Page Specific Enhancements -->
+    <script>
+        // Lightbox functionality
+        function openLightbox(imageSrc, title) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-image');
+            const lightboxTitle = document.getElementById('lightbox-title');
+
+            lightboxImg.src = imageSrc;
+            lightboxTitle.textContent = title;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create lightbox
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox';
+            lightbox.className = 'gallery-lightbox';
+            lightbox.innerHTML = `
+                <div class="lightbox-content">
+                    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+                    <img id="lightbox-image" src="" alt="">
+                    <div class="lightbox-title" id="lightbox-title"></div>
+                </div>
+            `;
+            document.body.appendChild(lightbox);
+
+            // Add click handlers to gallery buttons
+            document.querySelectorAll('.gallery-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const imageSrc = this.getAttribute('data-image');
+                    const title = this.getAttribute('data-title');
+                    openLightbox(imageSrc, title);
+                });
+            });
+
+            // Enhanced gallery card effects
+            document.querySelectorAll('.gallery-card').forEach((card, index) => {
+                card.addEventListener('mouseenter', function() {
+                    const overlay = this.querySelector('.gallery-overlay');
+                    overlay.style.opacity = '1';
+                    overlay.style.transform = 'translateY(0)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    const overlay = this.querySelector('.gallery-overlay');
+                    overlay.style.opacity = '0';
+                    overlay.style.transform = 'translateY(20px)';
+                });
+            });
+
+            // Keyboard navigation for lightbox
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Enhanced Gallery-specific styling */
+        .gallery-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: 3px solid transparent;
+            border-image: linear-gradient(135deg, #ff6600, #00ff88, #0099ff) 1;
+            box-shadow:
+                0 0 25px rgba(255, 102, 0, 0.15),
+                0 0 50px rgba(0, 255, 136, 0.1),
+                0 0 75px rgba(0, 153, 255, 0.1);
+        }
+
+        .gallery-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-btn {
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-category {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #00d4ff, #a855f7);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+        }
+
+        .gallery-meta {
+            margin-top: 1rem;
+        }
+
+        .gallery-tech {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Lightbox styling */
+        .gallery-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        #lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-title {
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.25rem;
+        }
+    </style>
 
 </body>
 

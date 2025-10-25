@@ -15,6 +15,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -52,39 +53,193 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero bg-primary text-white text-center py-5">
+    <!-- Enhanced Hero Section -->
+    <header class="hero particle-bg circuit-pattern text-white text-center min-vh-100 d-flex align-items-center position-relative">
         <div class="container">
-            <h1 class="display-4 animated fadeIn">Hello, I'm NDACYAYISABA Lambert</h1>
-            <p class="lead animated fadeIn">AI Specialist, Programmer, Researcher, and Mentor</p>
-            <a href="{% url 'about' %}" class="btn btn-light btn-lg animated fadeIn">Learn More About Me</a>
-        </div>
-    </header>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 font-weight-bold animate-fadeInUp mb-4">
+                        Hello, I'm <span style="color: #00A1F1 !important; font-weight: 900 !important;">NDACYAYISABA Lambert</span>
+                    </h1>
+                    <div class="typing-container mb-4">
+                        <p class="h3 animate-fadeInUp animation-delay-200">
+                            <span class="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </p>
+                    </div>
+                    <p class="lead animate-fadeInUp animation-delay-400 mb-5">
+                        Bridging educational gaps through innovative AI solutions in Rwanda
+                    </p>
 
-    <!-- About Me Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>
-                        I am an AI specialist, researcher, and programmer with a passion for improving educational technology. Currently, I'm working on integrating my platform EduTech+ with the Rwandan education system to enhance personalized learning experiences. I also have expertise in various programming languages, including PHP, HTML, CSS, JavaScript, and Python.
-                    </p>
-                    <p>
-                        I'm a mentor at the Rising Star Mentorship Program and a participant in the Aguka Ideation Entrepreneurship Programme, supported by the Tony Elumelu Foundation.
-                    </p>
-                    <a href="{% url 'about' %}" class="btn btn-primary">Read More</a>
-                </div>
-                <div class="col-md-6">
-                    <img src="{% static 'images/lambert.jpg' %}" alt="Profile Picture" class="img-fluid rounded-circle shadow-lg">
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-buttons animate-fadeInUp animation-delay-800">
+                        <a href="{% url 'about' %}" class="btn btn-light btn-lg mr-3 hover-lift">
+                            <i class="fas fa-user mr-2"></i>Learn More About Me
+                        </a>
+                        <a href="{% url 'projects' %}" class="btn btn-outline-light btn-lg hover-lift">
+                            <i class="fas fa-project-diagram mr-2"></i>View My Projects
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack Tags -->
+                    <div class="tech-stack mt-5 animate-fadeInUp animation-delay-1000">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Educational Technology</span>
+                        <span class="tech-tag">Data Science</span>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Enhanced Floating Elements with Rwandan Theme -->
+        <div class="floating-element floating-element-1">
+            <div class="floating-icon">
+                <i class="fas fa-flag"></i>
+            </div>
+        </div>
+        <div class="floating-element floating-element-2">
+            <div class="floating-icon">
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+        <div class="floating-element floating-element-3">
+            <div class="floating-icon">
+                <i class="fas fa-gem"></i>
+            </div>
+        </div>
+        <div class="floating-element floating-element-4">
+            <div class="floating-icon">
+                <i class="fas fa-crown"></i>
+            </div>
+        </div>
+
+        <!-- Additional Rwandan-themed floating orbs -->
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+    </header>
+
+    <!-- Enhanced About Me Section -->
+    <section id="about" class="py-5 position-relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="neural-bg"></div>
+
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-4 font-weight-bold mb-3" style="color: #00A1F1 !important;">
+                        About Me
+                    </h2>
+                    <p class="lead" style="color: #FCDD09 !important;">
+                        Discover my journey as an AI specialist and educational technology innovator
+                    </p>
+                    <div class="divider-icon mx-auto mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card holographic-card shadow-xl border-0 mb-4">
+                        <div class="row no-gutters">
+                            <!-- Image Section -->
+                            <div class="col-md-5 position-relative">
+                                <div class="image-frame position-relative">
+                                    <img src="{% static 'images/lambert.jpg' %}"
+                                         alt="NDACYAYISABA Lambert"
+                                         class="img-fluid w-100 h-100"
+                                         style="object-fit: cover; border-radius: 0 20px 20px 0;">
+                                    <!-- Overlay Pattern -->
+                                    <div class="image-overlay"></div>
+                                    <!-- Floating Badge -->
+                                    <div class="floating-badge">
+                                        <span class="badge badge-pill" style="background: linear-gradient(135deg, #00A1F1, #FCDD09); color: #000; font-weight: bold;">
+                                            <i class="fas fa-star mr-1"></i>AI Specialist
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <!-- Bio Cards -->
+                                    <div class="bio-card mb-4 p-4" style="background: linear-gradient(135deg, rgba(0, 161, 241, 0.1), rgba(252, 221, 9, 0.1)); border-radius: 15px; border-left: 5px solid #00A1F1;">
+                                        <h5 class="font-weight-bold mb-3" style="color: #00A1F1;">
+                                            <i class="fas fa-robot mr-2"></i>AI & Education Innovation
+                                        </h5>
+                                        <p class="mb-0" style="color: #333; line-height: 1.7;">
+                                            I am an AI specialist, researcher, and programmer with a passion for improving educational technology. Currently, I'm working on integrating my platform EduTech+ with the Rwandan education system to enhance personalized learning experiences. I also have expertise in various programming languages, including PHP, HTML, CSS, JavaScript, and Python.
+                                        </p>
+                                    </div>
+
+                                    <div class="bio-card mb-4 p-4" style="background: linear-gradient(135deg, rgba(0, 175, 39, 0.1), rgba(252, 221, 9, 0.1)); border-radius: 15px; border-left: 5px solid #00AF27;">
+                                        <h5 class="font-weight-bold mb-3" style="color: #00AF27;">
+                                            <i class="fas fa-handshake mr-2"></i>Mentorship & Leadership
+                                        </h5>
+                                        <p class="mb-0" style="color: #333; line-height: 1.7;">
+                                            I'm a mentor at the Rising Star Mentorship Program and a participant in the Aguka Ideation Entrepreneurship Programme, supported by the Tony Elumelu Foundation.
+                                        </p>
+                                    </div>
+
+                                    <!-- Stats Row -->
+                                    <div class="row text-center mb-4">
+                                        <div class="col-4">
+                                            <div class="stat-item">
+                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.5rem;">5+</div>
+                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.9rem;">Years Experience</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="stat-item">
+                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.5rem;">10+</div>
+                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.9rem;">AI Projects</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="stat-item">
+                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.5rem;">50+</div>
+                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.9rem;">Students Mentored</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CTA Button -->
+                                    <div class="text-center">
+                                        <a href="{% url 'about' %}" class="btn btn-lg px-5 py-3"
+                                           style="background: linear-gradient(135deg, #00A1F1, #FCDD09, #00AF27);
+                                                  color: #000; font-weight: bold; border: none; border-radius: 25px;">
+                                            <i class="fas fa-user mr-2"></i>Learn More About Me
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="floating-orb orb-4"></div>
+        <div class="floating-orb orb-5"></div>
     </section>
 
     <!-- Projects Section -->
@@ -129,14 +284,85 @@
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.</p>
-            <div>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" class="text-white mr-3"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-white"><i class="fas fa-envelope"></i></a>
+    <!-- Enhanced Modern Footer -->
+    <footer class="footer-section position-relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="footer-bg"></div>
+        <div class="floating-orb orb-6"></div>
+        <div class="floating-orb orb-7"></div>
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <!-- Main Footer Content -->
+                <div class="col-lg-8">
+                    <!-- Brand Section -->
+                    <div class="text-center mb-4">
+                        <h3 class="footer-brand mb-3">
+                            <span style="color: #00A1F1;">NDACYAYISABA</span>
+                            <span style="color: #FCDD09;"> Lambert</span>
+                        </h3>
+                        <p class="footer-tagline mb-4" style="color: rgba(255, 255, 255, 0.8);">
+                            AI Specialist • Educational Technology Innovator • Researcher • Mentor
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-grid mb-5">
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 161, 241, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-envelope contact-icon mb-2" style="color: #00A1F1; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Email</div>
+                            <a href="mailto:nlambert833@gmail.com" class="contact-link" style="color: #ffffff;">nlambert833@gmail.com</a>
+                        </div>
+
+                        <div class="contact-item text-center p-3" style="background: rgba(0, 175, 39, 0.1); border-radius: 15px; margin: 0 1rem;">
+                            <i class="fas fa-phone contact-icon mb-2" style="color: #00AF27; font-size: 1.5rem;"></i>
+                            <div class="contact-label" style="color: #FCDD09; font-weight: 600;">Phone</div>
+                            <a href="tel:+2507903111401" class="contact-link" style="color: #ffffff;">+250 790 311 401</a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-media-section text-center mb-4">
+                        <h5 class="mb-3" style="color: #FCDD09;">Connect With Me</h5>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ndacyayisaba-lambert-66625b231/"
+                               target="_blank"
+                               class="social-link linkedin"
+                               data-tooltip="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/LambertZar"
+                               target="_blank"
+                               class="social-link twitter"
+                               data-tooltip="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/Lambert-01"
+                               target="_blank"
+                               class="social-link github"
+                               data-tooltip="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <div class="footer-bottom text-center">
+                        <div class="footer-divider mb-3">
+                            <div class="divider-line"></div>
+                            <div class="divider-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-line"></div>
+                        </div>
+                        <p class="mb-2" style="color: rgba(255, 255, 255, 0.7);">
+                            &copy; 2024 NDACYAYISABA Lambert. All Rights Reserved.
+                        </p>
+                        <p class="mb-0" style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                            Bridging educational gaps through innovative AI solutions in Rwanda
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -146,14 +372,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!-- Enhanced JavaScript -->
+    <script src="{% static 'js/enhancements.js' %}"></script>
+
     <!-- Custom JS for scroll effects -->
     <script>
-        // Back to top button functionality
+        // Back to top button functionality (enhanced)
         const backToTopButton = document.querySelector(".back-to-top");
 
         window.onscroll = function() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 backToTopButton.style.display = "block";
+                backToTopButton.classList.add('animate-fadeInRight');
             } else {
                 backToTopButton.style.display = "none";
             }
