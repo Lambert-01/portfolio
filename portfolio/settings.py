@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xjt3yo^&8fcmaq=x))1ki5kavu)2eno4^2le1!_fo7p0jps-*!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []  # Update with your domain name(s) or IP address for production
+ALLOWED_HOSTS = ['portfolio-pa3d.onrender.com', 'localhost', '127.0.0.1']  # Update with your domain name(s) or IP address for production
 
 # Application definition
 INSTALLED_APPS = [
@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -92,6 +93,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Ensure your static files are correctly configured
 STATICFILES_DIRS = [
