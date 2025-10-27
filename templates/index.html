@@ -249,7 +249,10 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card shadow border-light">
-                        <img src="{% static 'images/project1.jpg' %}" class="card-img-top" alt="Project 1">
+                        <video class="card-img-top" controls>
+                            <source src="{% static 'images/edutech.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="card-body">
                             <h5 class="card-title">EduTech+</h5>
                             <p class="card-text">A platform designed to bridge educational gaps through personalized learning.</p>
@@ -259,7 +262,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card shadow border-light">
-                        <img src="{% static 'images/project2.jpg' %}" class="card-img-top" alt="Project 2">
+                        <video class="card-img-top" controls>
+                            <source src="{% static 'images/homelink demo.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="card-body">
                             <h5 class="card-title">Homelink Services</h5>
                             <p class="card-text">Providing quality housemaid services to families and homes in Rwanda.</p>
@@ -269,10 +275,13 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card shadow border-light">
-                        <img src="{% static 'images/project3.jpg' %}" class="card-img-top" alt="Project 3">
+                        <video class="card-img-top" controls>
+                            <source src="{% static 'images/trade_analysis.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="card-body">
-                            <h5 class="card-title">AI-Based Basketball Analysis</h5>
-                            <p class="card-text">A project that analyzes basketball movements using object detection and tracking algorithms.</p>
+                            <h5 class="card-title">NISR Analysis</h5>
+                            <p class="card-text">Trade analysis and data insights for National Institute of Statistics of Rwanda.</p>
                             <a href="{% url 'projects' %}" class="btn btn-primary">View Project</a>
                         </div>
                     </div>

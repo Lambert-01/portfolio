@@ -681,6 +681,12 @@ a:hover {
     transform: scale(1.05);
 }
 
+.card video.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
 .card-body {
     padding: var(--spacing-md);
 }
