@@ -159,73 +159,93 @@
                 <div class="col-lg-10">
                     <div class="card holographic-card shadow-xl border-0 mb-4">
                         <div class="row no-gutters">
-                            <!-- Image Section -->
-                            <div class="col-md-5 position-relative">
-                                <div class="image-frame position-relative">
-                                    <img src="{% static 'images/lambert.jpg' %}"
-                                         alt="NDACYAYISABA Lambert"
-                                         class="img-fluid w-100 h-100"
-                                         style="object-fit: cover; border-radius: 0 20px 20px 0;">
-                                    <!-- Overlay Pattern -->
-                                    <div class="image-overlay"></div>
-                                    <!-- Floating Badge -->
-                                    <div class="floating-badge">
-                                        <span class="badge badge-pill" style="background: linear-gradient(135deg, #00A1F1, #FCDD09); color: #000; font-weight: bold;">
-                                            <i class="fas fa-star mr-1"></i>AI Specialist
+                            <!-- Perfectly Aligned Image Section with Slideshow -->
+                            <div class="col-md-3 position-relative d-flex align-items-start justify-content-center">
+                                <div class="perfect-image-container">
+                                    <!-- Image Slideshow Container -->
+                                    <div class="image-slideshow">
+                                        <div class="slideshow-images">
+                                            <img src="{% static 'images/lambert.jpg' %}"
+                                                 alt="NDACYAYISABA Lambert - Professional Portrait"
+                                                 class="perfect-profile-image active"
+                                                 data-description="AI Specialist & Educational Technology Innovator">
+                                            <img src="{% static 'images/lambertt.jpg' %}"
+                                                 alt="NDACYAYISABA Lambert - Innovation Focus"
+                                                 class="perfect-profile-image"
+                                                 data-description="Passionate about bridging educational gaps through AI">
+                                            <img src="{% static 'images/lambet it.jpg' %}"
+                                                 alt="NDACYAYISABA Lambert - Leadership"
+                                                 class="perfect-profile-image"
+                                                 data-description="Mentor and rising star in tech entrepreneurship">
+                                        </div>
+                                        <!-- Slideshow Navigation Dots -->
+                                        <div class="slideshow-dots">
+                                            <span class="dot active" data-slide="0"></span>
+                                            <span class="dot" data-slide="1"></span>
+                                            <span class="dot" data-slide="2"></span>
+                                        </div>
+                                    </div>
+                                    <!-- Image Description -->
+                                    <div class="image-description">
+                                        <p class="description-text">AI Specialist & Educational Technology Innovator</p>
+                                    </div>
+                                    <div class="perfect-badge">
+                                        <span class="badge badge-pill" style="background: linear-gradient(135deg, #00A1F1, #FCDD09); color: #000; font-weight: bold; font-size: 0.7rem;">
+                                            <i class="fas fa-star mr-1"></i>AI
                                         </span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Content Section -->
-                            <div class="col-md-7">
-                                <div class="card-body p-5">
+                            <div class="col-md-8">
+                                <div class="card-body p-4">
                                     <!-- Bio Cards -->
-                                    <div class="bio-card mb-4 p-4" style="background: linear-gradient(135deg, rgba(0, 161, 241, 0.1), rgba(252, 221, 9, 0.1)); border-radius: 15px; border-left: 5px solid #00A1F1;">
-                                        <h5 class="font-weight-bold mb-3" style="color: #00A1F1;">
+                                    <div class="bio-card mb-3 p-3" style="background: linear-gradient(135deg, rgba(0, 161, 241, 0.1), rgba(252, 221, 9, 0.1)); border-radius: 15px; border-left: 5px solid #00A1F1;">
+                                        <h5 class="font-weight-bold mb-2" style="color: #00A1F1;">
                                             <i class="fas fa-robot mr-2"></i>AI & Education Innovation
                                         </h5>
-                                        <p class="mb-0" style="color: #333; line-height: 1.7;">
-                                            I am an AI specialist, researcher, and programmer with a passion for improving educational technology. Currently, I'm working on integrating my platform EduTech+ with the Rwandan education system to enhance personalized learning experiences. I also have expertise in various programming languages, including PHP, HTML, CSS, JavaScript, and Python.
+                                        <p class="mb-0" style="color: #333; line-height: 1.6; font-size: 0.95rem;">
+                                            AI enthusiast and applied mathematics student at University of Rwanda, specializing in full-stack development with expertise in Python, ML, and educational technology. Passionate about creating AI-powered solutions for personalized learning and bridging educational gaps in Rwanda.
                                         </p>
                                     </div>
 
-                                    <div class="bio-card mb-4 p-4" style="background: linear-gradient(135deg, rgba(0, 175, 39, 0.1), rgba(252, 221, 9, 0.1)); border-radius: 15px; border-left: 5px solid #00AF27;">
-                                        <h5 class="font-weight-bold mb-3" style="color: #00AF27;">
+                                    <div class="bio-card mb-3 p-3" style="background: linear-gradient(135deg, rgba(0, 175, 39, 0.1), rgba(252, 221, 9, 0.1)); border-radius: 15px; border-left: 5px solid #00AF27;">
+                                        <h5 class="font-weight-bold mb-2" style="color: #00AF27;">
                                             <i class="fas fa-handshake mr-2"></i>Mentorship & Leadership
                                         </h5>
-                                        <p class="mb-0" style="color: #333; line-height: 1.7;">
-                                            I'm a mentor at the Rising Star Mentorship Program and a participant in the Aguka Ideation Entrepreneurship Programme, supported by the Tony Elumelu Foundation.
+                                        <p class="mb-0" style="color: #333; line-height: 1.6; font-size: 0.95rem;">
+                                            Mentor at Rising Star Mentorship Program and participant in Aguka Ideation Entrepreneurship Programme.
                                         </p>
                                     </div>
 
                                     <!-- Stats Row -->
-                                    <div class="row text-center mb-4">
+                                    <div class="row text-center mb-3">
                                         <div class="col-4">
                                             <div class="stat-item">
-                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.5rem;">5+</div>
-                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.9rem;">Years Experience</div>
+                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.3rem;">5+</div>
+                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.8rem;">Years Experience</div>
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="stat-item">
-                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.5rem;">10+</div>
-                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.9rem;">AI Projects</div>
+                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.3rem;">10+</div>
+                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.8rem;">AI Projects</div>
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="stat-item">
-                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.5rem;">50+</div>
-                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.9rem;">Students Mentored</div>
+                                                <div class="stat-number font-weight-bold" style="color: #00A1F1; font-size: 1.3rem;">50+</div>
+                                                <div class="stat-label" style="color: #FCDD09; font-size: 0.8rem;">Students Mentored</div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- CTA Button -->
                                     <div class="text-center">
-                                        <a href="{% url 'about' %}" class="btn btn-lg px-5 py-3"
+                                        <a href="{% url 'about' %}" class="btn px-4 py-2"
                                            style="background: linear-gradient(135deg, #00A1F1, #FCDD09, #00AF27);
-                                                  color: #000; font-weight: bold; border: none; border-radius: 25px;">
+                                                  color: #000; font-weight: bold; border: none; border-radius: 25px; font-size: 0.9rem;">
                                             <i class="fas fa-user mr-2"></i>Learn More About Me
                                         </a>
                                     </div>
@@ -384,22 +404,132 @@
     <!-- Enhanced JavaScript -->
     <script src="{% static 'js/enhancements.js' %}"></script>
 
-    <!-- Custom JS for scroll effects -->
+    <!-- Enhanced JavaScript for Interactions -->
     <script>
-        // Back to top button functionality (enhanced)
-        const backToTopButton = document.querySelector(".back-to-top");
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhanced skill bar animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-progress');
+                        skillBars.forEach((bar, index) => {
+                            setTimeout(() => {
+                                const width = bar.getAttribute('data-width') || '80%';
+                                bar.style.width = width;
+                                bar.style.boxShadow = '0 0 20px rgba(0, 161, 241, 0.6)';
+                            }, index * 300);
+                        });
+                    }
+                });
+            });
 
-        window.onscroll = function() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                backToTopButton.style.display = "block";
-                backToTopButton.classList.add('animate-fadeInRight');
-            } else {
-                backToTopButton.style.display = "none";
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection) {
+                observer.observe(skillsSection);
             }
-        };
 
-        backToTopButton.addEventListener("click", function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            // Back to top button functionality (enhanced)
+            const backToTopButton = document.querySelector(".back-to-top");
+
+            window.onscroll = function() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    backToTopButton.style.display = "block";
+                    backToTopButton.classList.add('animate-fadeInRight');
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            };
+
+            backToTopButton.addEventListener("click", function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+
+            // Enhanced Image Slideshow Functionality
+            class ImageSlideshow {
+                constructor(container) {
+                    this.container = container;
+                    this.images = container.querySelectorAll('.perfect-profile-image');
+                    this.dots = container.querySelectorAll('.dot');
+                    this.description = container.querySelector('.description-text');
+                    this.currentIndex = 0;
+                    this.interval = null;
+                    this.init();
+                }
+
+                init() {
+                    // Set up dot navigation
+                    this.dots.forEach((dot, index) => {
+                        dot.addEventListener('click', () => this.goToSlide(index));
+                    });
+
+                    // Start automatic slideshow
+                    this.startSlideshow();
+
+                    // Pause on hover
+                    this.container.addEventListener('mouseenter', () => this.pauseSlideshow());
+                    this.container.addEventListener('mouseleave', () => this.startSlideshow());
+                }
+
+                goToSlide(index) {
+                    if (index === this.currentIndex) return;
+
+                    // Remove active class from current elements
+                    this.images[this.currentIndex].classList.remove('active');
+                    this.dots[this.currentIndex].classList.remove('active');
+
+                    // Add active class to new elements
+                    this.images[index].classList.add('active');
+                    this.dots[index].classList.add('active');
+
+                    // Update description
+                    const newDescription = this.images[index].getAttribute('data-description');
+                    if (this.description && newDescription) {
+                        this.description.textContent = newDescription;
+                    }
+
+                    this.currentIndex = index;
+                }
+
+                nextSlide() {
+                    const nextIndex = (this.currentIndex + 1) % this.images.length;
+                    this.goToSlide(nextIndex);
+                }
+
+                startSlideshow() {
+                    this.interval = setInterval(() => this.nextSlide(), 4000); // Change every 4 seconds
+                }
+
+                pauseSlideshow() {
+                    if (this.interval) {
+                        clearInterval(this.interval);
+                        this.interval = null;
+                    }
+                }
+            }
+
+            // Initialize slideshow
+            const slideshowContainer = document.querySelector('.image-slideshow');
+            if (slideshowContainer) {
+                new ImageSlideshow(slideshowContainer);
+            }
+
+            // Enhanced hover effects for slideshow images
+            const slideshowImages = document.querySelectorAll('.perfect-profile-image');
+            slideshowImages.forEach(image => {
+                image.addEventListener('mouseenter', function() {
+                    if (this.classList.contains('active')) {
+                        this.style.transform = 'scale(1.08) translateY(-2px)';
+                        this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.25)';
+                    }
+                });
+
+                image.addEventListener('mouseleave', function() {
+                    if (this.classList.contains('active')) {
+                        this.style.transform = 'scale(1) translateY(0)';
+                        this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+                    }
+                });
+            });
         });
     </script>
 

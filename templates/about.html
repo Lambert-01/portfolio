@@ -30,118 +30,158 @@
 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Enhanced Navigation Bar -->
+    <nav class="navbar navbar-enhanced navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'images/logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-                NDACYAYISABA Lambert
+                <span class="brand-text">NDACYAYISABA Lambert</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler enhanced-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" href="{% url 'home' %}" data-tooltip="Home">
+                            <i class="fas fa-home mr-1"></i>Home
+                        </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                        <a class="nav-link" href="{% url 'about' %}" data-tooltip="About Me">
+                            <i class="fas fa-user mr-1"></i>About
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                        <a class="nav-link" href="{% url 'projects' %}" data-tooltip="My Projects">
+                            <i class="fas fa-project-diagram mr-1"></i>Projects
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link" href="{% url 'contact' %}" data-tooltip="Contact Me">
+                            <i class="fas fa-envelope mr-1"></i>Contact
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                        <a class="nav-link" href="{% url 'blog' %}" data-tooltip="Blog">
+                            <i class="fas fa-blog mr-1"></i>Blog
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                        <a class="nav-link" href="{% url 'gallery' %}" data-tooltip="Gallery">
+                            <i class="fas fa-images mr-1"></i>Gallery
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Enhanced About Me Section -->
-    <section id="about" class="py-5 particle-bg circuit-pattern position-relative">
-        <div class="container">
+    <!-- Enhanced Hero About Section -->
+    <section id="about-hero" class="hero-section py-5 particle-bg circuit-pattern position-relative overflow-hidden">
+        <div class="container-fluid">
+            <!-- Dynamic Background Elements -->
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
 
-            <!-- Floating Background Elements -->
-            <div class="floating-orb" style="top: 15%; right: 10%; width: 120px; height: 120px;"></div>
-            <div class="floating-orb" style="bottom: 25%; left: 8%; width: 80px; height: 80px; animation-delay: 3s;"></div>
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="glow-text display-4 mb-4">About Me</h2>
-                    <p class="lead">
-                        Passionate AI specialist and educational technology innovator from Rwanda
-                    </p>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="geometric-border p-4 h-100">
-                        <h3 class="glow-text mb-4">
-                            <i class="fas fa-user-astronaut text-primary mr-3"></i>
-                            AI Specialist & Researcher
-                        </h3>
-
-                        <div class="about-content">
-                            <p class="mb-4">
-                                Hello! I'm <strong class="text-gradient">NDACYAYISABA Lambert</strong>, a passionate AI specialist, programmer, researcher, and mentor dedicated to transforming education through technology.
-                            </p>
-
-                            <div class="highlight-box mb-4">
-                                <h5 class="text-primary mb-3">
-                                    <i class="fas fa-lightbulb text-warning mr-2"></i>
-                                    My Mission
-                                </h5>
-                                <p>Bridging educational gaps through personalized learning platforms like <strong>EduTech+</strong>, using artificial intelligence to create tailored educational experiences.</p>
+            <div class="row align-items-center min-vh-100">
+                <!-- Profile Image Section -->
+                <div class="col-lg-5 text-center">
+                    <div class="profile-image-container position-relative">
+                        <div class="geometric-border p-3">
+                            <div class="image-frame">
+                                <img src="{% static 'images/lambert.jpg' %}" alt="NDACYAYISABA Lambert"
+                                     class="img-fluid profile-image">
+                                <!-- Image Overlay Effects -->
+                                <div class="image-overlay"></div>
                             </div>
+                        </div>
 
-                            <div class="row text-center mb-4">
-                                <div class="col-6">
-                                    <div class="counter text-primary" data-target="5">0</div>
-                                    <small>Years AI Experience</small>
-                                </div>
-                                <div class="col-6">
-                                    <div class="counter text-success" data-target="10">0</div>
-                                    <small>AI Projects</small>
-                                </div>
-                            </div>
-
-                            <div class="tech-badges">
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">Data Science</span>
-                                <span class="tech-tag">Educational Technology</span>
-                            </div>
+                        <!-- Enhanced Floating Badges -->
+                        <div class="profile-badges">
+                            <span class="profile-badge badge-python animate-delay-100">
+                                <i class="fab fa-python"></i>
+                                <span class="badge-tooltip">Python Expert</span>
+                            </span>
+                            <span class="profile-badge badge-ai animate-delay-300">
+                                <i class="fas fa-robot"></i>
+                                <span class="badge-tooltip">AI Specialist</span>
+                            </span>
+                            <span class="profile-badge badge-rwanda animate-delay-500">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="badge-tooltip">Rwanda</span>
+                            </span>
+                            <span class="profile-badge badge-innovation animate-delay-700">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="badge-tooltip">Innovator</span>
+                            </span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="profile-image-container">
-                        <div class="geometric-border">
-                            <img src="{% static 'images/lambert.jpg' %}" alt="NDACYAYISABA Lambert"
-                                 class="img-fluid rounded-circle profile-image">
+                <!-- Introduction Content -->
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <div class="hero-intro mb-4">
+                            <span class="intro-badge">AI Specialist & Researcher</span>
                         </div>
 
-                        <!-- Floating badges around profile image -->
-                        <div class="profile-badges">
-                            <span class="profile-badge badge-python">
-                                <i class="fab fa-python"></i>
-                            </span>
-                            <span class="profile-badge badge-ai">
-                                <i class="fas fa-robot"></i>
-                            </span>
-                            <span class="profile-badge badge-rwanda">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </span>
+                        <h1 class="hero-title glow-text mb-4">
+                            Hello, I'm <span class="name-highlight">NDACYAYISABA Lambert</span>
+                        </h1>
+
+                        <div class="hero-subtitle mb-4">
+                            <p class="lead text-light">
+                                AI enthusiast and applied mathematics student creating innovative educational technology solutions.
+                            </p>
+                        </div>
+
+                        <!-- Key Highlights -->
+                        <div class="hero-highlights mb-4">
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                                <span>Applied Mathematics Student</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-code text-success"></i>
+                                <span>Full-Stack Developer</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-users text-warning"></i>
+                                <span>Mentor & Leader</span>
+                            </div>
+                        </div>
+
+                        <!-- Mission Statement -->
+                        <div class="mission-card mb-4">
+                            <h4 class="mission-title">
+                                <i class="fas fa-rocket text-primary mr-2"></i>
+                                My Mission
+                            </h4>
+                            <p class="mission-text">
+                                Bridging educational gaps in Rwanda through AI-powered personalized learning platforms.
+                            </p>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="stats-grid mb-4">
+                            <div class="stat-item">
+                                <div class="stat-number text-primary" data-target="5">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number text-success" data-target="10">0</div>
+                                <div class="stat-label">AI Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number text-warning" data-target="50">0</div>
+                                <div class="stat-label">Students Mentored</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number text-info" data-target="3">0</div>
+                                <div class="stat-label">Countries Impacted</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,119 +189,264 @@
         </div>
     </section>
 
-    <!-- Enhanced Skills Section -->
+    <!-- Professional Experience Section -->
+    <section id="experience" class="py-5 position-relative overflow-hidden">
+        <div class="neural-bg">
+            <!-- Background Elements -->
+            <div class="floating-orb orb-4"></div>
+            <div class="floating-orb orb-5"></div>
+
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="glow-text display-4 mb-4">Professional Experience</h2>
+                        <p class="lead text-light">
+                            Building innovative AI solutions and leading educational technology initiatives
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="timeline">
+                    <!-- EduTech+ Project -->
+                    <div class="timeline-item scroll-animate slide-in-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h4 class="experience-title">EduTech+ Platform Development</h4>
+                                    <span class="experience-date">2023 - Present</span>
+                                </div>
+                                <div class="experience-role">Lead AI Developer & Researcher</div>
+                                <ul class="experience-responsibilities">
+                                    <li>Developed AI-powered personalized learning platform for Rwandan education</li>
+                                    <li>Implemented computer vision for automated assessment and ML for adaptive learning</li>
+                                    <li>Collaborated with University of Rwanda for deployment</li>
+                                    <li>Led agile development team of 3 developers</li>
+                                </ul>
+                                <div class="experience-tech">
+                                    <span class="tech-pill">Python</span>
+                                    <span class="tech-pill">PyTorch</span>
+                                    <span class="tech-pill">OpenCV</span>
+                                    <span class="tech-pill">Django</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Homelink Services -->
+                    <div class="timeline-item scroll-animate slide-in-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h4 class="experience-title">Homelink Services</h4>
+                                    <span class="experience-date">2023 - Present</span>
+                                </div>
+                                <div class="experience-role">Full-Stack Developer & Business Analyst</div>
+                                <ul class="experience-responsibilities">
+                                    <li>Built housemaid services platform with user authentication and booking systems</li>
+                                    <li>Developed admin dashboard for service management and analytics</li>
+                                    <li>Integrated payment processing and notification systems</li>
+                                    <li>Conducted market research and competitive analysis</li>
+                                </ul>
+                                <div class="experience-tech">
+                                    <span class="tech-pill">PHP</span>
+                                    <span class="tech-pill">JavaScript</span>
+                                    <span class="tech-pill">MySQL</span>
+                                    <span class="tech-pill">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NISR Data Analysis -->
+                    <div class="timeline-item scroll-animate slide-in-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h4 class="experience-title">NISR Trade Data Analysis</h4>
+                                    <span class="experience-date">2024</span>
+                                </div>
+                                <div class="experience-role">Data Analyst & Visualization Specialist</div>
+                                <ul class="experience-responsibilities">
+                                    <li>Analyzed Rwanda's trade data for National Institute of Statistics</li>
+                                    <li>Created interactive dashboards for trade pattern visualization</li>
+                                    <li>Implemented statistical models for trend analysis and forecasting</li>
+                                    <li>Developed automated reporting systems and presented to government officials</li>
+                                </ul>
+                                <div class="experience-tech">
+                                    <span class="tech-pill">Python</span>
+                                    <span class="tech-pill">Pandas</span>
+                                    <span class="tech-pill">Tableau</span>
+                                    <span class="tech-pill">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mentorship Program -->
+                    <div class="timeline-item scroll-animate slide-in-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h4 class="experience-title">Rising Star Mentorship Program</h4>
+                                    <span class="experience-date">2023 - Present</span>
+                                </div>
+                                <div class="experience-role">AI Mentor & Program Coordinator</div>
+                                <ul class="experience-responsibilities">
+                                    <li>Mentored 50+ students in AI and programming fundamentals</li>
+                                    <li>Developed structured curriculum for AI education</li>
+                                    <li>Organized workshops and hackathons for skill development</li>
+                                    <li>Coordinated internships and established peer learning communities</li>
+                                </ul>
+                                <div class="experience-tech">
+                                    <span class="tech-pill">Python</span>
+                                    <span class="tech-pill">Machine Learning</span>
+                                    <span class="tech-pill">Leadership</span>
+                                    <span class="tech-pill">Education</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
     <section id="skills" class="py-5 matrix-bg position-relative">
         <div class="container">
-
-            <!-- Background floating elements -->
-            <div class="spiral-element" style="top: 20%; right: 10%;"></div>
-            <div class="data-stream" style="height: 200px; right: 20%; top: 30%;"></div>
+            <!-- Background Elements -->
+            <div class="spiral-element"></div>
+            <div class="data-stream"></div>
 
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
-                    <h2 class="glow-text display-4 mb-4">Skills & Expertise</h2>
-                    <p class="lead">
-                        Comprehensive technical skills across AI, development, and project management
+                    <h2 class="glow-text display-4 mb-4">Technical Expertise</h2>
+                    <p class="lead text-light">
+                        Comprehensive skills in AI, software development, and educational technology
                     </p>
                 </div>
             </div>
 
             <div class="row">
-                <!-- Enhanced Programming Languages -->
-                <div class="col-md-4 mb-4">
-                    <div class="geometric-border h-100 p-4 text-center">
-                        <div class="skill-icon mb-3">
-                            <i class="fas fa-code text-primary" style="font-size: 3rem;"></i>
+                <!-- Programming Languages -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-category-card scroll-animate fade-in-scale">
+                        <div class="skill-category-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-code text-primary"></i>
+                            </div>
+                            <h5 class="skill-category-title">Programming Languages</h5>
                         </div>
-                        <h5 class="glow-text mb-4">Programming Languages</h5>
-
-                        <div class="skills-container">
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Python</span>
-                                    <span>95%</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">95%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="95%"></div>
                                 </div>
                             </div>
-
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>JavaScript</span>
-                                    <span>85%</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85%"></div>
                                 </div>
                             </div>
-
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>PHP</span>
-                                    <span>80%</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percentage">80%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>HTML & CSS</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90%"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Enhanced Tools & Frameworks -->
-                <div class="col-md-4 mb-4">
-                    <div class="geometric-border h-100 p-4 text-center">
-                        <div class="skill-icon mb-3">
-                            <i class="fas fa-tools text-success" style="font-size: 3rem;"></i>
+                <!-- AI & Machine Learning -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-category-card scroll-animate fade-in-scale animate-delay-200">
+                        <div class="skill-category-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain text-success"></i>
+                            </div>
+                            <h5 class="skill-category-title">AI & Machine Learning</h5>
                         </div>
-                        <h5 class="glow-text mb-4">AI & Frameworks</h5>
-
-                        <div class="skills-container">
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>PyTorch</span>
-                                    <span>90%</span>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PyTorch</span>
+                                    <span class="skill-percentage">90%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90%"></div>
                                 </div>
                             </div>
-
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>OpenCV</span>
-                                    <span>85%</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Computer Vision</span>
+                                    <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85%"></div>
                                 </div>
                             </div>
-
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>NumPy</span>
-                                    <span>88%</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Data Science</span>
+                                    <span class="skill-percentage">88%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="88%"></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Web Development -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-category-card scroll-animate fade-in-scale animate-delay-400">
+                        <div class="skill-category-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-globe text-warning"></i>
+                            </div>
+                            <h5 class="skill-category-title">Web Development</h5>
+                        </div>
+                        <div class="skill-items">
                             <div class="skill-item">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Bootstrap</span>
-                                    <span>92%</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Django</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Bootstrap</span>
+                                    <span class="skill-percentage">92%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="92%"></div>
@@ -271,52 +456,125 @@
                     </div>
                 </div>
 
-                <!-- Enhanced Project Management -->
-                <div class="col-md-4 mb-4">
-                    <div class="geometric-border h-100 p-4 text-center">
-                        <div class="skill-icon mb-3">
-                            <i class="fas fa-project-diagram text-warning" style="font-size: 3rem;"></i>
+                <!-- Leadership & Management -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-category-card scroll-animate fade-in-scale animate-delay-600">
+                        <div class="skill-category-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-users text-info"></i>
+                            </div>
+                            <h5 class="skill-category-title">Leadership & Management</h5>
                         </div>
-                        <h5 class="glow-text mb-4">Project Management</h5>
-
-                        <div class="skills-container">
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Agile</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90%"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item mb-3">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Jira</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85%"></div>
-                                </div>
-                            </div>
-
+                        <div class="skill-items">
                             <div class="skill-item">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Leadership</span>
-                                    <span>88%</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Team Leadership</span>
+                                    <span class="skill-percentage">88%</span>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="88%"></div>
                                 </div>
                             </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Project Management</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Agile Methodology</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Additional Skills Cloud -->
-                        <div class="skills-cloud mt-4">
-                            <span class="skill-cloud-item">Team Management</span>
-                            <span class="skill-cloud-item">Strategic Planning</span>
-                            <span class="skill-cloud-item">Client Relations</span>
-                            <span class="skill-cloud-item">Innovation</span>
+                <!-- Data Analysis -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-category-card scroll-animate fade-in-scale animate-delay-800">
+                        <div class="skill-category-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar text-danger"></i>
+                            </div>
+                            <h5 class="skill-category-title">Data Analysis</h5>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Pandas</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">NumPy</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Tableau</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-category-card scroll-animate fade-in-scale animate-delay-1000">
+                        <div class="skill-category-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-handshake text-secondary"></i>
+                            </div>
+                            <h5 class="skill-category-title">Professional Skills</h5>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Communication</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Problem Solving</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Innovation</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -324,18 +582,275 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-5">
+    <!-- Education & Certifications Section -->
+    <section id="education" class="py-5 position-relative">
         <div class="container">
-            <h2 class="text-center mb-4">Education</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>University of Rwanda</h5>
-                    <p><strong>Bachelor of Science in Applied Mathematics</strong> (Expected 2025)</p>
+            <!-- Background Elements -->
+            <div class="floating-orb orb-6"></div>
+            <div class="floating-orb orb-7"></div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="glow-text display-4 mb-4">Education & Certifications</h2>
+                    <p class="lead text-light">
+                        Academic foundation and professional certifications in AI and technology
+                    </p>
                 </div>
-                <div class="col-md-6">
-                    <h5>ALX - Artificial Intelligence Courses</h5>
-                    <p><strong>AI Virtual Assistant Program</strong> (Completed 2024)</p>
+            </div>
+
+            <div class="row">
+                <!-- Academic Education -->
+                <div class="col-lg-6 mb-4">
+                    <div class="education-card scroll-animate slide-in-left">
+                        <div class="education-header">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                            </div>
+                            <div class="education-info">
+                                <h4 class="education-title">University of Rwanda</h4>
+                                <span class="education-date">2021 - 2025 (Expected)</span>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <h5 class="degree-title">Bachelor of Science in Applied Mathematics</h5>
+                            <p class="education-description">
+                                Comprehensive study in mathematical foundations, statistics, and computational methods for real-world problem solving.
+                            </p>
+                            <div class="education-highlights">
+                                <span class="highlight-tag">Mathematics</span>
+                                <span class="highlight-tag">Statistics</span>
+                                <span class="highlight-tag">Computational Methods</span>
+                                <span class="highlight-tag">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Certifications -->
+                <div class="col-lg-6 mb-4">
+                    <div class="education-card scroll-animate slide-in-right">
+                        <div class="education-header">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate text-success"></i>
+                            </div>
+                            <div class="education-info">
+                                <h4 class="education-title">ALX Artificial Intelligence</h4>
+                                <span class="education-date">2024</span>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <h5 class="degree-title">AI Virtual Assistant Program</h5>
+                            <p class="education-description">
+                                Intensive program covering AI fundamentals, machine learning, NLP, and practical AI applications.
+                            </p>
+                            <div class="education-highlights">
+                                <span class="highlight-tag">Machine Learning</span>
+                                <span class="highlight-tag">NLP</span>
+                                <span class="highlight-tag">AI Ethics</span>
+                                <span class="highlight-tag">Practical AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Certifications -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="certifications-grid">
+                        <div class="certification-item scroll-animate fade-in-scale">
+                            <div class="certification-icon">
+                                <i class="fab fa-python text-warning"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h6>Python Programming</h6>
+                                <span>Advanced Level</span>
+                            </div>
+                        </div>
+
+                        <div class="certification-item scroll-animate fade-in-scale animate-delay-200">
+                            <div class="certification-icon">
+                                <i class="fas fa-brain text-info"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h6>Machine Learning</h6>
+                                <span>Specialization</span>
+                            </div>
+                        </div>
+
+                        <div class="certification-item scroll-animate fade-in-scale animate-delay-400">
+                            <div class="certification-icon">
+                                <i class="fas fa-chart-line text-success"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h6>Data Science</h6>
+                                <span>Professional</span>
+                            </div>
+                        </div>
+
+                        <div class="certification-item scroll-animate fade-in-scale animate-delay-600">
+                            <div class="certification-icon">
+                                <i class="fas fa-code text-primary"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h6>Web Development</h6>
+                                <span>Full Stack</span>
+                            </div>
+                        </div>
+
+                        <div class="certification-item scroll-animate fade-in-scale animate-delay-800">
+                            <div class="certification-icon">
+                                <i class="fas fa-users text-danger"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h6>Leadership</h6>
+                                <span>Professional</span>
+                            </div>
+                        </div>
+
+                        <div class="certification-item scroll-animate fade-in-scale animate-delay-1000">
+                            <div class="certification-icon">
+                                <i class="fas fa-project-diagram text-secondary"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h6>Project Management</h6>
+                                <span>Agile Certified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Impact Section -->
+    <section id="achievements" class="py-5 position-relative overflow-hidden">
+        <div class="circuit-pattern">
+            <!-- Background Elements -->
+            <div class="floating-orb orb-8"></div>
+            <div class="floating-orb orb-9"></div>
+
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="glow-text display-4 mb-4">Impact & Achievements</h2>
+                        <p class="lead text-light">
+                            Making a difference through technology and education
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Key Achievements -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="achievement-card scroll-animate fade-in-scale">
+                            <div class="achievement-icon">
+                                <i class="fas fa-users text-primary"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-number" data-target="50">0</h3>
+                                <h5 class="achievement-title">Students Mentored</h5>
+                                <p class="achievement-description">
+                                    Guided 50+ students in AI and programming through mentorship program
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="achievement-card scroll-animate fade-in-scale animate-delay-200">
+                            <div class="achievement-icon">
+                                <i class="fas fa-project-diagram text-success"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-number" data-target="10">0</h3>
+                                <h5 class="achievement-title">AI Projects</h5>
+                                <p class="achievement-description">
+                                    Developed 10+ AI-powered solutions for education and business
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="achievement-card scroll-animate fade-in-scale animate-delay-400">
+                            <div class="achievement-icon">
+                                <i class="fas fa-globe text-warning"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-number" data-target="3">0</h3>
+                                <h5 class="achievement-title">Countries Impacted</h5>
+                                <p class="achievement-description">
+                                    Extended educational technology solutions across African nations
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="achievement-card scroll-animate fade-in-scale animate-delay-600">
+                            <div class="achievement-icon">
+                                <i class="fas fa-award text-info"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-number" data-target="5">0</h3>
+                                <h5 class="achievement-title">Years Experience</h5>
+                                <p class="achievement-description">
+                                    Five years of dedicated experience in AI and educational technology
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="achievement-card scroll-animate fade-in-scale animate-delay-800">
+                            <div class="achievement-icon">
+                                <i class="fas fa-handshake text-danger"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-number" data-target="15">0</h3>
+                                <h5 class="achievement-title">Collaborations</h5>
+                                <p class="achievement-description">
+                                    Partnered with universities, government agencies, and tech companies
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="achievement-card scroll-animate fade-in-scale animate-delay-1000">
+                            <div class="achievement-icon">
+                                <i class="fas fa-rocket text-secondary"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-number" data-target="100">0</h3>
+                                <h5 class="achievement-title">Lives Impacted</h5>
+                                <p class="achievement-description">
+                                    Directly improved educational access for hundreds of students
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8 text-center">
+                        <div class="cta-card scroll-animate fade-in-scale">
+                            <h3 class="cta-title">Ready to Collaborate?</h3>
+                            <p class="cta-description">
+                                Let's collaborate on innovative AI solutions for education and technology across Africa.
+                            </p>
+                            <div class="cta-buttons">
+                                <a href="{% url 'projects' %}" class="btn btn-primary btn-lg mr-3">
+                                    <i class="fas fa-eye mr-2"></i>View My Work
+                                </a>
+                                <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">
+                                    <i class="fas fa-envelope mr-2"></i>Get In Touch
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -435,7 +950,7 @@
     <!-- About Page Specific Enhancements -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Animate skill bars when they come into view
+            // Enhanced skill bar animations
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -444,7 +959,8 @@
                             setTimeout(() => {
                                 const width = bar.getAttribute('data-width') || '80%';
                                 bar.style.width = width;
-                            }, index * 200);
+                                bar.style.boxShadow = '0 0 20px rgba(0, 161, 241, 0.6)';
+                            }, index * 300);
                         });
                     }
                 });
@@ -455,37 +971,289 @@
                 observer.observe(skillsSection);
             }
 
-            // Add hover effects to skill items
+            // Enhanced hover effects for skill items
             document.querySelectorAll('.skill-item').forEach(item => {
                 item.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateX(10px)';
+                    this.style.transform = 'translateX(15px) scale(1.02)';
+                    this.style.transition = 'all 0.3s ease';
                 });
 
                 item.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateX(0)';
+                    this.style.transform = 'translateX(0) scale(1)';
                 });
+            });
+
+            // Timeline animation on scroll
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                timelineObserver.observe(item);
+            });
+
+            // Achievement number counter animation
+            const achievementObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const numbers = entry.target.querySelectorAll('.achievement-number');
+                        numbers.forEach(number => {
+                            const target = parseInt(number.getAttribute('data-target'));
+                            let current = 0;
+                            const increment = target / 100;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                number.textContent = Math.floor(current);
+                            }, 30);
+                        });
+                    }
+                });
+            });
+
+            document.querySelectorAll('.achievement-card').forEach(card => {
+                achievementObserver.observe(card);
+            });
+
+            // Enhanced floating badge interactions
+            document.querySelectorAll('.profile-badge').forEach(badge => {
+                badge.addEventListener('mouseenter', function() {
+                    this.style.animationPlayState = 'paused';
+                });
+
+                badge.addEventListener('mouseleave', function() {
+                    this.style.animationPlayState = 'running';
+                });
+            });
+
+            // Dynamic particle effect
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'floating-orb';
+                particle.style.width = Math.random() * 50 + 20 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDuration = Math.random() * 10 + 10 + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+
+                document.querySelector('.hero-section').appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 15000);
+            }
+
+            // Create particles periodically
+            setInterval(createParticle, 3000);
+
+            // Enhanced scroll-triggered animations
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            });
+
+            document.querySelectorAll('[class*="animate-"]').forEach(el => {
+                scrollObserver.observe(el);
             });
         });
     </script>
 
     <style>
-        /* Additional styles for about page */
+        /* Enhanced About Page Styles */
+
+        /* Hero Section Styles */
+        .hero-section {
+            background: linear-gradient(135deg,
+                #00A1F1 0%, #FCDD09 25%, #00AF27 50%,
+                #FCDD09 75%, #00A1F1 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 161, 241, 0.3);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .name-highlight {
+            background: linear-gradient(135deg, #FCDD09, #00A1F1, #00AF27);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .highlight-item i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .mission-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .mission-title {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-text {
+            color: white;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tech-showcase h5 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        /* Profile Image Styles */
         .profile-image-container {
             position: relative;
-            display: inline-block;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .image-frame {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .profile-image {
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 400px;
             object-fit: cover;
-            border: 4px solid rgba(0, 212, 255, 0.3);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
-        .profile-image:hover {
-            border-color: #00d4ff;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                rgba(0, 161, 241, 0.1) 0%,
+                rgba(252, 221, 9, 0.1) 50%,
+                rgba(0, 175, 39, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .profile-image-container:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .profile-image-container:hover .profile-image {
             transform: scale(1.05);
         }
 
@@ -500,21 +1268,43 @@
 
         .profile-badge {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            animation: badgeFloat 4s ease-in-out infinite;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            animation: badgeFloat 6s ease-in-out infinite;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .badge-tooltip {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .profile-badge:hover .badge-tooltip {
+            opacity: 1;
         }
 
         .badge-python {
             top: 10%;
             right: 10%;
             background: linear-gradient(135deg, #3776ab, #ffd43b);
-            color: white;
             animation-delay: 0s;
         }
 
@@ -522,61 +1312,683 @@
             bottom: 15%;
             right: 5%;
             background: linear-gradient(135deg, #00d4ff, #a855f7);
-            color: white;
-            animation-delay: 1s;
+            animation-delay: 2s;
         }
 
         .badge-rwanda {
             top: 5%;
             left: 8%;
             background: linear-gradient(135deg, #059669, #f59e0b);
-            color: white;
-            animation-delay: 2s;
+            animation-delay: 4s;
+        }
+
+        .badge-innovation {
+            bottom: 10%;
+            left: 10%;
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            animation-delay: 6s;
         }
 
         @keyframes badgeFloat {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.2) rotate(5deg); }
+            0%, 100% {
+                transform: scale(1) rotate(0deg) translateY(0);
+            }
+            25% {
+                transform: scale(1.1) rotate(5deg) translateY(-5px);
+            }
+            50% {
+                transform: scale(0.9) rotate(-5deg) translateY(-10px);
+            }
+            75% {
+                transform: scale(1.05) rotate(3deg) translateY(-5px);
+            }
         }
 
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(168, 85, 247, 0.1));
-            border-left: 4px solid #00d4ff;
-            padding: 1.5rem;
-            border-radius: 8px;
+        /* Experience Section Styles */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
         }
 
-        .tech-badges {
-            margin-top: 2rem;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            transform: translateX(-50%);
+            border-radius: 2px;
         }
 
-        .skills-cloud {
+        .timeline-item {
+            position: relative;
+            margin: 3rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(0, 161, 241, 0.5);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+
+        .experience-card {
+            position: relative;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .experience-date {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .experience-role {
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .experience-responsibilities {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-responsibilities li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .experience-responsibilities li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .experience-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            justify-content: center;
+            margin-top: 1rem;
         }
 
-        .skill-cloud-item {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(168, 85, 247, 0.1));
-            color: #00d4ff;
+        .tech-pill {
+            background: linear-gradient(135deg, rgba(0, 161, 241, 0.1), rgba(252, 221, 9, 0.1));
+            color: var(--primary-color);
             padding: 0.25rem 0.75rem;
             border-radius: 15px;
-            font-size: 0.875rem;
-            border: 1px solid rgba(0, 212, 255, 0.3);
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 161, 241, 0.3);
         }
 
-        .text-gradient {
-            background: linear-gradient(135deg, #ff6600, #00ff88, #0099ff);
+        /* Skills Section Styles */
+        .skill-category-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 2rem;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 161, 241, 0.3);
+        }
+
+        .skill-category-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .skill-item {
+            position: relative;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .skill-percentage {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+            width: 0%;
+            transition: width 1.5s ease-in-out;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 161, 241, 0.3);
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: skillShimmer 2s infinite;
+            border-radius: 4px;
+        }
+
+        @keyframes skillShimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Enhanced hover effects */
+        .skill-category-card:hover .skill-progress {
+            box-shadow: 0 0 20px rgba(0, 161, 241, 0.6);
+        }
+
+        /* Pulse animation for achievement numbers */
+        .achievement-number {
+            animation: numberPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes numberPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Enhanced floating elements */
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 161, 241, 0.3), rgba(252, 221, 9, 0.3));
+            animation: floatOrb 6s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .floating-orb.orb-1 {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-orb.orb-2 {
+            width: 60px;
+            height: 60px;
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-orb.orb-3 {
+            width: 100px;
+            height: 100px;
+            bottom: 15%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        /* Enhanced timeline animations */
+        .timeline-item {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .timeline-item:nth-child(even).animate {
+            animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        .timeline-item:nth-child(odd).animate {
+            animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px) scale(0.9); opacity: 0; }
+            to { transform: translateX(0) scale(1); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100px) scale(0.9); opacity: 0; }
+            to { transform: translateX(0) scale(1); opacity: 1; }
+        }
+
+        /* Enhanced profile badge animations */
+        .profile-badge {
+            transition: all 0.3s ease;
+        }
+
+        .profile-badge:hover {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Glow effect for text */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 161, 241, 0.5), 0 0 20px rgba(0, 161, 241, 0.3), 0 0 30px rgba(0, 161, 241, 0.2);
+        }
+
+        /* Enhanced button hover effects */
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 161, 241, 0.4);
+        }
+
+        /* Particle effect background */
+        .particle-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(0, 161, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(252, 221, 9, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 175, 39, 0.1) 0%, transparent 50%);
+            animation: particleFloat 20s ease-in-out infinite;
+        }
+
+        @keyframes particleFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+
+        /* Education Section Styles */
+        .education-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 161, 241, 0.3);
+        }
+
+        .education-info h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .education-date {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .degree-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .education-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .education-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .highlight-tag {
+            background: linear-gradient(135deg, rgba(0, 161, 241, 0.1), rgba(252, 221, 9, 0.1));
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 161, 241, 0.3);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .certification-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .certification-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .certification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1rem;
+        }
+
+        .certification-info h6 {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .certification-info span {
+            color: var(--accent-color);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Achievements Section Styles */
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 15px rgba(0, 161, 241, 0.3);
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-weight: 900;
-            text-shadow:
-                0 0 15px rgba(255, 102, 0, 0.8),
-                0 0 30px rgba(0, 255, 136, 0.6),
-                0 0 45px rgba(0, 153, 255, 0.4);
-            filter: brightness(1.4) contrast(1.2);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, rgba(0, 161, 241, 0.1), rgba(252, 221, 9, 0.1));
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 2rem 0;
+                min-height: auto;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-highlights {
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-category-card {
+                padding: 1.5rem;
+            }
+
+            .education-card,
+            .achievement-card {
+                padding: 1.5rem;
+            }
         }
     </style>
 
