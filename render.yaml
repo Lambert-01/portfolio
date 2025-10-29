@@ -1,7 +1,7 @@
 services:
   - type: web
     name: portfolio
-    runtime: python3
+    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn portfolio.wsgi
     envVars:
@@ -9,3 +9,5 @@ services:
         value: portfolio.settings
       - key: PYTHON_VERSION
         value: 3.11.9
+      - key: DISABLE_COLLECTSTATIC
+        value: 1
