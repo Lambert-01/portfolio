@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-xjt3yo^&8fcmaq=x))1ki
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['portfolio-pa3d.onrender.com', 'localhost', '127.0.0.1', '0.0.0.0', 'portfolio.onrender.com']  # Update with your domain name(s) or IP address for production
+ALLOWED_HOSTS = ['lambert-portfolios.onrender.com', 'localhost', '127.0.0.1', '0.0.0.0', 'portfolio.onrender.com', 'portfolio-pa3d.onrender.com']  # Update with your domain name(s) or IP address for production
 
 # Application definition
 INSTALLED_APPS = [
