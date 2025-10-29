@@ -7,7 +7,5 @@ services:
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: portfolio.settings
-      - key: PYTHON_VERSION
-        value: 3.11.9
       - key: DISABLE_COLLECTSTATIC
         value: 1
